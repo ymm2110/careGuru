@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,400" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Catamaran', Helvetica, Arial, sans-serif;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        button {
+            border: none;
+        }
+
+        button:focus {
+            outline: none;   
+        }
+
+        .clearfix:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    
+    <app></app>
+
+
+
+
+
+
+    
+    <script src="./js/riot+compiler.js"></script>
+    <script src="./tags/app.tag" type="riot/tag"></script>
+    <script src="./tags/logIn.tag" type="riot/tag"></script>
+    <script src="./tags/dataView.tag" type="riot/tag"></script>
+    <script src="./js/highcharts.js"></script>
+    <script> riot.mount("*")</script>
+
+</body>
+</html>
