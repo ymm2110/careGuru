@@ -7,7 +7,7 @@
     <div class="main-inner">
       <nav class="clearfix">
         <div class="logo">
-          LOGO
+          <img src="./img/LOGO.png" alt="logo">
         </div>
   
         <ul class="nav-right">
@@ -31,11 +31,8 @@
 
 
 
+  <dataView></dataView>
   <footerWave></footerWave>
-
-
-
-  <!-- <dataView></dataView> -->
   <script>
     
   </script>
@@ -74,10 +71,17 @@
       padding: 15px;
       border-bottom: 1px solid #8BD0E3;
       box-sizing: border-box;
+      height: 65px;
     }
     .header nav .logo {
       float: left;
-      padding: 5px 0;
+      height: 56px;
+      bottom: 10px;
+      position: relative;
+    }
+    .header nav .logo img {
+      height: 100%;
+      width: auto;
     }
     .header nav .nav-right {
       float: right;

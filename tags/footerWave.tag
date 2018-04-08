@@ -30,7 +30,6 @@
     this.on('mount', function() {
 
       window.onresize = function() {
-        console.log(window.innerWidth)
         canvas.width = window.innerWidth -15;
       };
 
