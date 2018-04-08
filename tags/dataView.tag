@@ -208,7 +208,6 @@
       border-radius: 4px;
       background: transparent;
       color: #27314D;
-      transition: all .4s;
     }
     .dataToggle:hover {
       background: #27314D;
@@ -219,20 +218,7 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-    }
-    .activate {
-      animation: slideIn 1s ease-in-out;
-    }
-
-    @keyframes slideIn {
-      from {
-        transform: translateY(-100px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0px);
-        opacity: 1;
-      }
+      position: relative;
     }
 
     .data-view {

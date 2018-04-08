@@ -26,6 +26,7 @@
 
         button {
             border: none;
+            transition: all .4s;
         }
 
         input {
@@ -48,6 +49,33 @@
         body {
             /* border-bottom: 13px solid #27324B;   */
         }
+
+        .activate {
+            animation: slideIn 1s cubic-bezier(1, 0.15, 0.23, 0.87); 
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        .deactivate {
+            animation: slideOut 1s cubic-bezier(1, 0.15, 0.23, 0.87); 
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -64,6 +92,7 @@
     <script src="./tags/logIn.tag" type="riot/tag"></script>
     <script src="./tags/dataView.tag" type="riot/tag"></script>
     <script src="./tags/footerWave.tag" type="riot/tag"></script>
+    <script src="./tags/videoPlay.tag" type="riot/tag"></script>
     <script src="./js/highcharts.js"></script>
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script> riot.mount("*")</script>
