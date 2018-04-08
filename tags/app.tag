@@ -1,34 +1,36 @@
 
 <app>
   <!-- <login></login> -->
-  <!-- <dataView></dataView> -->
-  <div class="shadow" show={videoPlay}></div>
-  <main class="header">
-    <div class="main-inner">
-      <nav class="clearfix">
-        <div class="logo">
-          <img src="./img/LOGO.png" alt="logo">
+  <div class={wrap:videoPlay}>
+    <div class="shadow" show={videoPlay}></div>
+    <main class="header">
+      <div class="main-inner">
+        <nav class="clearfix">
+          <div class="logo">
+            <img src="./img/LOGO.png" alt="logo">
+          </div>
+          <ul class="nav-right">
+            <li><a href="">TOUR</a></li>
+            <li><a href="">FAQS</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li id="login">GET ACCESS</li>
+          </ul>
+        </nav>
+        <div class="head-middle">
+          <h1>Introducing Insurance</h1>
+          <p>It's tiem to say goodbay to confusion</p>
+          <button class="playBt" onclick={playVideo}><i class="fa fa-play-circle"></i> <span>Watch Video</span></button>
         </div>
-        <ul class="nav-right">
-          <li><a href="">TOUR</a></li>
-          <li><a href="">FAQS</a></li>
-          <li><a href="">CONTACT</a></li>
-          <li id="login">GET ACCESS</li>
-        </ul>
-      </nav>
-      <div class="head-middle">
-        <h1>Introducing Insurance</h1>
-        <p>It's tiem to say goodbay to confusion</p>
-        <button class="playBt" onclick={playVideo}><i class="fa fa-play-circle"></i> <span>Watch Video</span></button>
+  
       </div>
-
+    </main>
+    <div if={videoPlay} ref='videoPlay'>
+      <videoPlay></videoPlay>
     </div>
-  </main>
-  <div if={videoPlay} ref='videoPlay'>
-    <videoPlay></videoPlay>
+    <dataView></dataView>
+    <footerWave></footerWave>
   </div>
-  <dataView></dataView>
-  <footerWave></footerWave>
+
   <script>
     this.videoPlay = false;
     playVideo() {
@@ -40,6 +42,10 @@
   
   
   <style>
+    .wrap {
+      position: fixed;
+    }
+
     .shadow {
       position: fixed;
       z-index: 11;
