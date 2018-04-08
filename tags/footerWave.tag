@@ -4,8 +4,8 @@
     <canvas id="wave" width ="938" height="400"></canvas>
     <form action="" class="email">
       <div class="input-wrap">
-        <input type="text" placeholder="Enter Email to Request Your Insurance">
-        <div class="icon">
+        <input type="text" placeholder="Enter Email to Request Your Insurance" ref="emailInput">
+        <div class="icon" ref="icon">
           <i class="fa fa-paper-plane"></i>
         </div>
       </div>
@@ -26,6 +26,7 @@
   </div>
 
   <script>
+    var that = this;
     //Canvas Wave code credit to codePen "Cidi": url: https://codepen.io/cidicles/pen/yKOzjP?editors=1010
     this.on('mount', function() {
 
@@ -65,6 +66,14 @@
     })
 
 
+   this.on('mount', function() {
+      this.refs.emailInput.onfocus = function() {
+        that.refs.icon.classList.add('pop');
+      }
+      this.refs.emailInput.onblur = function() {
+        that.refs.icon.classList.remove('pop');
+      }
+   })
   </script>
 
   <style>
@@ -142,6 +151,22 @@
       cursor: pointer;
       border-radius: 4px;
     }
+
+    .email .input-wrap .icon.pop {
+      animation: pop .4s cubic-bezier(0, 1.68, 0.93, 1.17);
+    }
+    @keyframes pop {
+      0% {
+        transform: translateX(0px);
+      }
+      50% {
+        transform: translateX(-20px);
+      }
+      0% {
+        transform: translateX(0px);
+      }
+    }
+
     .email .input-wrap .icon i{
       color: #fff;
       line-height: 28px;
