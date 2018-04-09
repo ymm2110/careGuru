@@ -1,6 +1,6 @@
 
 <header>
-  <main class="header" id = {tour: this.opts.page === "tour", faqs: this.opts.page === "faqs", }>
+  <main class="header" id = {tour: this.opts.page === "tour", faqs: this.opts.page === "faqs", contact: this.opts.page === "contact"}>
     <div class="main-inner">
       <nav class="clearfix">
         <div class="logo">
@@ -24,9 +24,10 @@
     </div>
   </main>
   <script>
-  //  this.on('mount', function() {
-      console.log(this.opts.page);
-  //  })
+    playVideo() {
+        this.parent.videoPlay = true;
+        this.parent.update();
+      }
   </script>
 
   <style>
@@ -42,6 +43,16 @@
 
     .header#tour {
       background: url("./img/tour1.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .header#faqs {
+      background: url("./img/faqs1.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .header#contact {
+      background: url("./img/contact1.jpg") no-repeat;
       background-size: cover;
       background-position: center;
     }

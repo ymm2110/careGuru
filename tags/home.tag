@@ -22,9 +22,6 @@
 
   <script>
      this.videoPlay = false;
-      playVideo() {
-        this.videoPlay = true;
-      }
   </script>
 
   <style>

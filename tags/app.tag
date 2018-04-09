@@ -4,6 +4,9 @@
   
   <home if={ page==='home' } page = {page}></home>
   <tour if ={ page === 'tour' } page = {page}></tour>
+  <faqs if ={ page === 'faqs' } page = {page}></faqs>
+  <contact if ={ page === 'contact' } page = {page}></contact>
+
 
   <script>
 
