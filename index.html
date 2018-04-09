@@ -76,10 +76,100 @@
                 opacity: 0;
             }
         }
+
+        /* loading animation */
+        .animation {
+            width: 10px;
+            height: 65px;
+            background: #27324B;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            animation: anime1 ease-in-out 2s infinite;
+        }
+
+        @keyframes anime1 {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        .animation::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 0;
+            width: 10px;
+            height: 65px;
+            background: #EE7379;
+            border-radius: 6px;
+            animation: anime2 ease-in-out 2s infinite;
+        }
+
+        @keyframes anime2 {
+            0% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(30px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+
+
+        .animation::before {
+            content: "";
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 10px;
+            height: 65px;
+            background: #72CFE7;
+            border-radius: 6px;
+            animation: anime3 ease-in-out 2s infinite;
+        }
+
+        @keyframes anime3 {
+            0% {
+                transform: translateY(10px);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        .loading {
+            position: fixed;
+            background: #fff;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 11;
+        }
+
     </style>
 </head>
 <body>
     
+    <div class="loading"><div class="animation"></div></div>
     <app></app>
 
 
@@ -96,6 +186,12 @@
     <script src="./js/highcharts.js"></script>
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script> riot.mount("*")</script>
+    <script>
+        setTimeout(() => {
+            var loading = document.querySelector('.loading');
+            loading.style.display = "none";
+        }, 2000);
+    </script>
 
 </body>
 </html>
