@@ -9,21 +9,25 @@
       <img src="./img/LOGO2.png" alt="logo">
     </div>
   </div>
-  <button class="dataToggle" onclick={dataToggle}>How People Think About Insurance</button>
+  <button class="btn" onclick={dataToggle}>How People Think About Insurance</button>
   <div class="dataWrap" show={showData} ref="showData">
     <div id="status" class="data-view"></div>
     <div id="usage" class="data-view"></div>
     <!-- <div id="rating" class="data-view"></div> -->
   </div>
   
-  
+  <button class="btn"  show={showData} ref="showData">Take A Tour Around</button>
+
+
   <script>
     var that = this;
     this.showData = false;
     dataToggle() {
       this.showData = true;
-      this.refs.showData.classList.add('activate')
-    }
+      this.refs.showData.forEach((x)=> {
+        x.classList.add('activate');
+      });
+    };
 
 
 
@@ -197,23 +201,6 @@
       width: 100%;
       height: auto;
     }
-
-    .dataToggle {
-      display: block;
-      cursor: pointer;
-      font-size: 1em;
-      padding: 5px 10px;
-      border: 1px solid #27314D;
-      margin: 20px auto;
-      border-radius: 4px;
-      background: transparent;
-      color: #27314D;
-    }
-    .dataToggle:hover {
-      background: #27314D;
-      color: #fff;
-    }
-
     .dataWrap {
       display: flex;
       justify-content: space-around;
