@@ -16,7 +16,7 @@
     <!-- <div id="rating" class="data-view"></div> -->
   </div>
   
-  <button class="btn"  show={showData} ref="showData">Take A Tour Around</button>
+  <a href="#tour" class="btn"  show={showData} ref="showData" type="button">Take A Tour Around</a>
 
 
   <script>
@@ -212,6 +212,11 @@
       min-width: 310px;
       height: 300px;
       max-width: 400px;
+    }
+
+    a.btn {
+      width: 155.44px;
+      box-sizing: border-box;
     }
   </style>
 </dataView>

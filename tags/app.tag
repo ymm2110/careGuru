@@ -1,7 +1,7 @@
 
 <app>
   <!-- <login></login> -->
-  <div class={wrap:videoPlay}>  <!--prevent background scrolling -->
+  <div class={wrap:videoPlay} if={!user}>  <!--prevent background scrolling -->
     <div class="shadow" show={videoPlay || loginPanel }></div>
     <home if={ page==='home' } page = {page}></home>
     <tour if ={ page === 'tour' } page = {page}></tour>
@@ -9,6 +9,8 @@
     <contact if ={ page === 'contact' } page = {page}></contact>  
     <logIn if={ loginPanel }></logIn>
   </div>
+
+  <personPanel if={user}></personPanel>
 
   <script>
     var that = this;
@@ -18,17 +20,19 @@
     this.user = false;
 
 
-
     var Router = route.create();
     Router('*', function (page) {
       that.page = page;
       that.update();
-      console.log(that.page)
+      // console.log(that.page)
     })
 
     route.start(true);
 
-
+    firebase.auth().onAuthStateChanged(function (userObj) {
+        that.user = firebase.auth().currentUser;
+        that.update();
+      })
   </script>
 
   
