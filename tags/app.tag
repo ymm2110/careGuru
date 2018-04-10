@@ -1,7 +1,7 @@
 
 <app>
   <!-- <login></login> -->
-  <div class={wrap:videoPlay} if={!user}>  <!--prevent background scrolling -->
+  <div class={wrap:videoPlay || loginPanel } if={!user}>  <!--prevent background scrolling -->
     <div class="shadow" show={videoPlay || loginPanel }></div>
     <home if={ page==='home' } page = {page}></home>
     <tour if ={ page === 'tour' } page = {page}></tour>
