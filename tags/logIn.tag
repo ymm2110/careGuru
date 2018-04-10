@@ -1,7 +1,7 @@
 
 <logIn>
 
-   <section class="login fix-center">
+   <section class="login fix-center" ref="login">
 
      <video autoplay loop id="video-background" muted plays-inline ref="video">
       <source src="./img/login_v.mp4" type="video/mp4">
@@ -26,11 +26,20 @@
       this.parent.loginPanel = false;
       this.parent.update();
     }
+
+    this.on('mount', function() {
+      var login = this.refs.login;
+      login.classList.add('fallDown');
+    })
+    this.on('before-unmount', function() {
+      var login = this.refs.login;
+      login.classList.remove('fallDown');
+    })
+
   </script>
 
   <style>
     .login {
-      background: #ddd;
       z-index: 21;
       width: 320px;
       height: 560px;

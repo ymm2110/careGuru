@@ -173,8 +173,19 @@ body::-webkit-scrollbar-thumb {
     z-index: 11;
 }
 
-
-
+.fallDown {
+    animation: fall 1s cubic-bezier(0.13, 1.15, 0.85, 1.38) forwards;
+}
+@keyframes fall {
+    from {
+        transform: translateY(-90px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 
