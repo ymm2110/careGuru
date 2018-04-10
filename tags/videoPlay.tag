@@ -1,6 +1,6 @@
 
 <videoPlay>
- <div class="wrap">
+ <div class="wrap" ref="wrap">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/DBTmNm8D-84?enablejsapi=1" frameborder="0" id="video"></iframe>
   <button id="close" onclick={closeVideo} ref="closeBtn">close</button>
  </div>
@@ -16,6 +16,15 @@
       this.parent.parent.update(); //close shadow layer in app.tag
 
     }
+
+    this.on('mount', function () {
+        var wrap = this.refs.wrap;
+        wrap.classList.add('fallDown');
+      })
+      this.on('before-unmount', function () {
+        var wrap = this.refs.wrap;
+        wrap.classList.remove('fallDown');
+      })
 
 
   </script>

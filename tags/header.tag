@@ -16,7 +16,7 @@
           <li>
             <a href="#contact">CONTACT</a>
           </li>
-          <li id="login" onclick={loginTrigger}>GET ACCESS</li>
+          <li id="login" onclick={loginTrigger} if={!this.parent.user}>GET ACCESS</li>
         </ul>
       </nav>
 

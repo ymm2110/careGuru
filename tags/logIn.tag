@@ -17,6 +17,8 @@
         <button class="loginBtn signinBtn">Log In</button>
         <button class="loginBtn signupBtn">Sign Up</button>
       </form>
+      <p id="google-login"><i class="fa fa-google" onclick={googleSign}></i></p>
+      <p id="google-hint">Login With Google</p>
      </div>
    </section>
 
@@ -26,6 +28,30 @@
       this.parent.loginPanel = false;
       this.parent.update();
     }
+    googleSign() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider).then(function (result) {
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+        that.parent.user = user;
+        that.parent.update();
+      }).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+
+        console.log(error.code + error.message + error.email)
+      });
+    }
+
+
 
     this.on('mount', function() {
       var login = this.refs.login;
@@ -55,6 +81,7 @@
       right: 0;
       z-index: 23;
       background: rgba(0, 0, 0, 0.3);
+      background: linear-gradient(0deg, rgba(0,0,0,0.5984768907563025) 0%, rgba(0,0,0,0.22032563025210083) 100%);
     }
     #video-background {
       position: absolute;
@@ -89,7 +116,7 @@
       padding: 60px;
     }
     .login-info p{
-      padding: 20px 30px;
+      padding: 10px 20px;
       text-align: center;
     }
     
@@ -159,5 +186,24 @@
       box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3), -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
     }
     
+    .login-info #google-login {
+      padding: 0px;
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+    .login-info #google-login i{
+      cursor: pointer;
+      transition: all .4s;
+    }
+
+    .login-info #google-login i:hover {
+      color: #EE747A;
+    }
+
+    .login-info #google-hint {
+      padding: 0;
+      font-size: 10px;
+    }
+
     </style>
 </logIn>

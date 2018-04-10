@@ -15,6 +15,7 @@
     this.page = "home";
     this.videoPlay = false;
     this.loginPanel = false;
+    this.user = false;
 
 
 
