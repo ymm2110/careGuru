@@ -17,6 +17,7 @@ a {
 button {
     border: none;
     transition: all .4s;
+    cursor: pointer;
 }
 
 input {
@@ -199,4 +200,13 @@ body::-webkit-scrollbar-thumb {
 .btn:hover {
     background: #27314D;
     color: #fff;
+}
+
+.fix-center {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }

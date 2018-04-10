@@ -8,10 +8,12 @@
     var that = this;
     closeVideo() {
       this.parent.videoPlay = false;
+      this.parent.parent.videoPlay = false;
       setTimeout(function() {
         that.parent.update();
       }, 1000)
-      this.parent.update();
+      this.parent.update(); //close videoPlay tag
+      this.parent.parent.update(); //close shadow layer in app.tag
 
     }
 

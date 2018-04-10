@@ -35,11 +35,23 @@
     <script src="./js/highcharts.js"></script>
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script> riot.mount("*")</script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script>
-        setTimeout(() => {
-            var loading = document.querySelector('.loading');
-            loading.style.display = "none";
-        }, 2000);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDSB_NAOipKSoFJ4XzgT4QNMOIvKPo79t0",
+            authDomain: "todolist-f59af.firebaseapp.com",
+            databaseURL: "https://todolist-f59af.firebaseio.com",
+            projectId: "todolist-f59af",
+            storageBucket: "todolist-f59af.appspot.com",
+            messagingSenderId: "228377112675"
+        };
+        firebase.initializeApp(config);
+        var careGuruRef = firebase.database().ref('/careGuru');
+    </script>
+    <script>
+        var loading = document.querySelector('.loading');
+        loading.style.display = "none";
     </script>
 
 </body>

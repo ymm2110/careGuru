@@ -1,7 +1,4 @@
-
 <home>
-  <div class={wrap:videoPlay}>
-    <div class="shadow" show={videoPlay}></div>
     <header page={this.opts.page}>
       <div class="head-middle">
         <h1>Introducing Insurance</h1>
@@ -17,28 +14,12 @@
     </div>
     <dataView></dataView>
     <footerWave></footerWave>
-  </div>
-
 
   <script>
-     this.videoPlay = false;
+     
   </script>
 
   <style>
-    .wrap {
-      position: fixed;
-    }
-
-    .shadow {
-      position: fixed;
-      z-index: 11;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
-
     .header .head-middle {
       text-align: center;
       margin-top: 100px;
@@ -52,7 +33,7 @@
     .header .head-middle p{
       font-size: 1.4em;
       font-weight: 100;
-      padding: 20px 0;
+      padding: 20px 20%;
       text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
       position: relative;
     }
@@ -78,7 +59,6 @@
       padding: 7px 7px;
       border-radius: 15px;
       font-size: 13px;
-      cursor: pointer;
       line-height: 1em;
     }
     .header .head-middle .playBt span{

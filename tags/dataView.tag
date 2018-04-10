@@ -213,7 +213,5 @@
       height: 300px;
       max-width: 400px;
     }
-
-
   </style>
 </dataView>

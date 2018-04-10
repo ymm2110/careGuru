@@ -16,9 +16,10 @@
           <li>
             <a href="#contact">CONTACT</a>
           </li>
-          <li id="login">GET ACCESS</li>
+          <li id="login" onclick={loginTrigger}>GET ACCESS</li>
         </ul>
       </nav>
+
       <yield/> 
   
     </div>
@@ -26,8 +27,15 @@
   <script>
     playVideo() {
         this.parent.videoPlay = true;
-        this.parent.update();
+        this.parent.parent.videoPlay = true;
+        this.parent.update();   //open videoPlay tag
+        this.parent.parent.update(); //open shadow layer in app.tag
       }
+
+    loginTrigger() {
+        this.parent.parent.loginPanel = true;
+        this.parent.parent.update();
+    }
   </script>
 
   <style>
@@ -116,8 +124,7 @@
     .header nav .nav-right #login:hover {
       background: #fff;
       color: #DE838A;
-      box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3);
-      box-shadow: -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
+      box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3), -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
     }
   </style>
 </header>
