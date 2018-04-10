@@ -29,10 +29,12 @@
 
     route.start(true);
 
-    firebase.auth().onAuthStateChanged(function (userObj) {
+    this.on('mount', function() {
+      firebase.auth().onAuthStateChanged(function (userObj) {
         that.user = firebase.auth().currentUser;
         that.update();
       })
+    })
   </script>
 
   
