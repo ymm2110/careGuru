@@ -1,12 +1,12 @@
 
 <contact>
-  <header page={this.opts.page}>
+  <home-header page={this.opts.page}>
     <div class="head-middle">
       <h1>Contact</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt eveniet aspernatur culpa, quis minima quae! A ipsa harum,
         iste officiis recusandae sed eaque aliquid sint nesciunt repellendus, provident nostrum totam?</p>
     </div>
-  </header>
+  </home-header>
   <script>
 
   </script>

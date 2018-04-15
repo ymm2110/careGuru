@@ -1,5 +1,5 @@
 <home>
-    <header page={this.opts.page}>
+    <home-header page={this.opts.page}>
       <div class="head-middle">
         <h1>Introducing Insurance</h1>
         <p>It's tiem to say goodbay to confusion</p>
@@ -8,7 +8,7 @@
           <span>Watch Video</span>
         </button>
       </div>
-    </header>
+    </home-header>
     <div if={videoPlay} ref='videoPlay'>
       <videoPlay></videoPlay>
     </div>

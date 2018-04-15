@@ -35,8 +35,10 @@
         // The signed-in user info.
         var user = result.user;
         // ...
+        route(user.uid);
         that.parent.user = user;
         that.parent.update();
+
       }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;

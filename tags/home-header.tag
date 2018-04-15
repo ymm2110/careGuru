@@ -1,5 +1,5 @@
 
-<header>
+<home-header>
   <main class="header" id = {tour: this.opts.page === "tour", faqs: this.opts.page === "faqs", contact: this.opts.page === "contact"}>
     <div class="main-inner">
       <nav class="clearfix">
@@ -127,4 +127,4 @@
       box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3), -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
     }
   </style>
-</header>
+</home-header>
