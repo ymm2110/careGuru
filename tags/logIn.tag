@@ -36,7 +36,21 @@
         var user = result.user;
         // ...
         route(user.uid);
+        //initialize user info object
+        var userInfo = {
+          name: user.displayName,
+          uid: user.uid,
+          profile: user.photoURL,
+          firstLogin: true,
+          surveyData: null  //data can't be undefined, otherwise can't be pushed to firebase
+
+        }
+        careGuruRef.child(user.uid).set(userInfo).catch(function(error) {
+          console.log(error.code + error.message)
+        });
+
         that.parent.user = user;
+        // careGuruRef.child()
         that.parent.update();
 
       }).catch(function (error) {

@@ -34,7 +34,7 @@
         firebase.auth().onAuthStateChanged(function (userObj) {
          that.user = firebase.auth().currentUser;
          that.update();
-         console.log(that.user)
+        //  console.log(that.user)
        })
     //  }
 

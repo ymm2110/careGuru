@@ -1,21 +1,43 @@
 
 <panel-home>
-  <h1>Hi this is home</h1>
-  <section class="wrap">
-    <div class="home-option">
-      <img src="./../img/app1.jpg" alt="tempo">
-    </div>
-    <div class="home-option">
-      <img src="./../img/app1.jpg" alt="tempo">
-    </div>
-    <div class="home-option">
-      <img src="./../img/app1.jpg" alt="tempo">
-    </div>
-  </section>
+  <div>
+    <h1>Hi this is home</h1>
+    <section class="wrap tobeanimate">
+      <div class="home-option" each = {i in options}>
+        <img src={i.imgSrc} alt={i.title}>
+        <h3>{i.title}</h3>
+      </div>
+    </section>
+  </div>
   <script>
-    message() {
-      return 'there'
-    }
+   this.options = [
+     {
+      imgSrc: "../img/app1.jpg",
+      title: "Must-Know Information",
+     },
+     {
+      imgSrc: "../img/app1.jpg",
+      title: "Learning Scenarios",
+
+     },
+     {
+      imgSrc: "../img/app1.jpg",
+      title: "Personalized reminder",
+
+     }
+   ]
+
+
+
+    this.on('mount', function() {
+      var wrap = document.querySelector('.tobeanimate');
+      wrap.classList.add('slideIn');
+    })
+    this.on('before-unmount', function() {
+      // var wrap = document.querySelector('.tobeanimate');
+      // // wrap.classList.remove('slideIn');
+      // console.log(wrap);
+    })
   </script>
 
   <style>
@@ -29,15 +51,29 @@
       display: flex;
       justify-content: center;
       text-align: center;
+      flex-wrap: wrap;
+      overflow: auto;
+      height: 450px;
     }
 
     .wrap .home-option {
-      width: 200px;
-      height: 250px;
+      width: 250px;
+      height: 280px;
       background: #fff;
-      margin: 50px;
-      box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1);
+      margin: 20px 50px;
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
       border-radius: 6px;
+      box-sizing: border-box;
+      padding: 20px;
+      transition: box-shadow .3s ease-in-out;
+    }
+    .wrap .home-option h3{
+      font-weight: 100;
+
+    }
+
+    .wrap .home-option:hover {
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
     
     .wrap .home-option img{
