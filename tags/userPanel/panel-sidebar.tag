@@ -2,7 +2,7 @@
 <panel-sidebar>
     <ul>
       <li><img src="./../img/logo2.png" alt="logo"></li>
-      <li class={activeSideBar: currentPage === 'home'}><a href="#{this.parent.parent.user.uid}/home"><i class="fa fa-home"></i></a></li>
+      <li class={activeSideBar: currentPage === 'home'}><a href="#{this.parent.parent.user.uid}/home" onclick={goback}><i class="fa fa-home"></i></a></li>
       <li class={activeSideBar: currentPage === 'product'}><a href="#{this.parent.parent.user.uid}/product"><i class="fa fa-tachometer"></i></a></li>
       <li class={activeSideBar: currentPage === 'community'}><i class="fa fa-comment"></i></li>
       <li class={activeSideBar: currentPage === 'notification'}><i class="fa fa-bell"></i></li>
@@ -12,6 +12,12 @@
     this.on('update', function() {
       that.currentPage = that.parent.currentPage; //obtain the current page from parent tag to switch mode
     })
+
+    goback() {
+      //set the homepage panel parameter to none for user to go back when they are in home panel branches
+      this.parent.tags.panelhome.homePage = false; 
+      this.parent.tags.panelhome.update(); 
+    }
   </script>
 
   <style>
@@ -27,6 +33,8 @@
     }
     ul > li > a{
       color: inherit;
+      width: 100%;
+      display: inline-block;
     }
 
     ul > li:first-child {

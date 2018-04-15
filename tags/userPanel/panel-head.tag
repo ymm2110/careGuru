@@ -6,9 +6,9 @@
           <img src={user.photoURL} alt="profile">
           {user.displayName}
           <ul class="submenu">
-            <li>123</li>
-            <li>123</li>
-            <li onclick={logOut}>log out</li>
+            <li onclick={usercard}><i class="fa fa-user-circle"></i> Account</li>
+            <li><i class="fa fa-gear"></i>Lorem ipsum</li>
+            <li onclick={logOut}><i class="fa fa-sign-out"></i>sign out</li>
           </ul>
         </li>
         <li><i class="fa fa-gear"></i></li>
@@ -36,27 +36,21 @@
         })
       })
 
-      // mouseenter() {
-      //   console.log('in')
-      //   var submenu = document.querySelector('.submenu');
-      //   submenu.classList.add('menu-active');
-      // // }
-      // // mouseout() {
-      //   console.log('out')
-      //   var submenu = document.querySelector('.submenu');
-      //   submenu.classList.remove('menu-active');
-      // }
+      usercard() {
+        this.parent.usercard = true;
+        this.parent.update();
+      }
 
-        this.on('mount', function() {
-          $('.user-menu').mouseenter(function () {
-            var submenu = document.querySelector('.submenu');
-            submenu.classList.add('menu-active');
-          })
-          $('.user-menu').mouseleave(function () {
-            var submenu = document.querySelector('.submenu');
-            submenu.classList.remove('menu-active');
-          })
+      this.on('mount', function() {
+        $('.user-menu').mouseenter(function () {
+          var submenu = document.querySelector('.submenu');
+          submenu.classList.add('menu-active');
         })
+        $('.user-menu').mouseleave(function () {
+          var submenu = document.querySelector('.submenu');
+          submenu.classList.remove('menu-active');
+        })
+      })
 
 
   </script>
@@ -120,6 +114,9 @@
     }
     header > nav > ul > li.user-menu > .submenu > li:hover{
       background-color: #f5f6fA;
+    }
+    header > nav > ul > li.user-menu > .submenu > li > i{
+      padding: 0 5px;
     }
 
 

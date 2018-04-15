@@ -86,11 +86,6 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
 }
 
-.slideIn {
-    /* opacity: 1; */
-    animation: slideIn ease-in-out 1s forwards;
-}
-
 @keyframes slideIn{
     from {
         transform: translateY(120px);
@@ -242,4 +237,9 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.panel-main-wrap {
+    overflow: auto;
+    height: 100%;
 }

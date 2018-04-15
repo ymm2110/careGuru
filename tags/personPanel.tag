@@ -3,9 +3,10 @@
     <panel-sidebar class="sidebar"></panel-sidebar>
     <main>
       <panel-head></panel-head>
-      <panel-home if={ subpage === `${this.uid}/home` }></panel-home>
+      <panelHome if={ subpage === `${this.uid}/home` }></panelHome>
       <panel-product if={ subpage === `${this.uid}/product` }></panel-product>
     </main>
+    <panel-user-card if={usercard}></panel-user-card>
   </section>
 
   <script>

@@ -20,26 +20,9 @@
 
 
 
-    <script src="./js/riot+compiler.js"></script>
-    <script src="./js/riot-router.js"></script>
-    <script src="./tags/app.tag" type="riot/tag"></script>
-    <script src="./tags/home-header.tag" type="riot/tag"></script>
-    <script src="./tags/home.tag" type="riot/tag"></script>
-    <script src="./tags/faqs.tag" type="riot/tag"></script>
-    <script src="./tags/contact.tag" type="riot/tag"></script>
-    <script src="./tags/logIn.tag" type="riot/tag"></script>
-    <script src="./tags/dataView.tag" type="riot/tag"></script>
-    <script src="./tags/footerWave.tag" type="riot/tag"></script>
-    <script src="./tags/videoPlay.tag" type="riot/tag"></script>
-    <script src="./tags/tour.tag" type="riot/tag"></script>
-    <script src="./tags/personPanel.tag" type="riot/tag"></script>
-    <script src="./tags/userPanel/panel-head.tag" type="riot/tag"></script>
-    <script src="./tags/userPanel/panel-home.tag" type="riot/tag"></script>
-    <script src="./tags/userPanel/panel-product.tag" type="riot/tag"></script>
-    <script src="./tags/userPanel/panel-sidebar.tag" type="riot/tag"></script>
-    <script src="./js/highcharts.js"></script>
-    <script src="./js/jquery-3.1.1.min.js"></script>
-    <script> riot.mount("app")</script>
+
+
+    
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -54,6 +37,30 @@
         firebase.initializeApp(config);
         var careGuruRef = firebase.database().ref('/careGuru');
     </script>
+    <script src="./js/riot+compiler.js"></script>
+    <script src="./js/riot-router.js"></script>
+    <script src="./tags/app.tag" type="riot/tag"></script>
+    <script src="./tags/home-header.tag" type="riot/tag"></script>
+    <script src="./tags/home.tag" type="riot/tag"></script>
+    <script src="./tags/faqs.tag" type="riot/tag"></script>
+    <script src="./tags/contact.tag" type="riot/tag"></script>
+    <script src="./tags/logIn.tag" type="riot/tag"></script>
+    <script src="./tags/dataView.tag" type="riot/tag"></script>
+    <script src="./tags/footerWave.tag" type="riot/tag"></script>
+    <script src="./tags/videoPlay.tag" type="riot/tag"></script>
+    <script src="./tags/tour.tag" type="riot/tag"></script>
+    <script src="./tags/personPanel.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panel-head.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panelHome.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panel-product.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panel-sidebar.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panel-user-card.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panelHome/info.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panelHome/scene.tag" type="riot/tag"></script>
+    <script src="./tags/userPanel/panelHome/reminder.tag" type="riot/tag"></script>
+    <script src="./js/highcharts.js"></script>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script> riot.mount("app")</script>
     <script>
         var loading = document.querySelector('.loading');
         loading.style.display = "none";

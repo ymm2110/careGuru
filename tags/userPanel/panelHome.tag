@@ -1,38 +1,42 @@
 
-<panel-home>
-  <div>
+<panelHome>
+  <div class="home-wrap" if={!homePage}>
     <h1>Hi this is home</h1>
     <section class="wrap tobeanimate">
-      <div class="home-option" each = {i in options}>
-        <img src={i.imgSrc} alt={i.title}>
+      <div class="home-option" each = {i in options} onclick={enter}>
+        <img src={i.imgSrc} alt={i.title} >
         <h3>{i.title}</h3>
       </div>
     </section>
   </div>
+
+  <info if={homePage === "must-know-info"}></info>
+  <scene if={homePage === "learning-scene"}></scene>
+  <reminder if={homePage === "reminder"}></reminder>
+
   <script>
    this.options = [
      {
       imgSrc: "../img/app1.jpg",
       title: "Must-Know Information",
+      homePage: "must-know-info"
      },
      {
       imgSrc: "../img/app1.jpg",
       title: "Learning Scenarios",
-
+      homePage: "learning-scene"
      },
      {
       imgSrc: "../img/app1.jpg",
       title: "Personalized reminder",
-
+      homePage: "reminder"
      }
    ]
+  
+    enter(e) {
+      this.homePage = e.item.i.homePage;
+    }
 
-
-
-    this.on('mount', function() {
-      var wrap = document.querySelector('.tobeanimate');
-      wrap.classList.add('slideIn');
-    })
     this.on('before-unmount', function() {
       // var wrap = document.querySelector('.tobeanimate');
       // // wrap.classList.remove('slideIn');
@@ -41,19 +45,23 @@
   </script>
 
   <style>
+    .home-wrap {
+
+    }
+
     h1 {
       text-align: center;
       padding: 40px 0;
     }
     
     .wrap {
-      margin: 40px auto;
       display: flex;
       justify-content: center;
       text-align: center;
       flex-wrap: wrap;
       overflow: auto;
       height: 450px;
+      animation: slideIn ease-in-out 1s forwards;
     }
 
     .wrap .home-option {
@@ -83,4 +91,4 @@
 
     }
   </style>
-</panel-home>
+</panelHome>
