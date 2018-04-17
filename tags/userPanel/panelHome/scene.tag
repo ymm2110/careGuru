@@ -1,8 +1,24 @@
 
 <scene>
-  <p>Hi this is the scene</p>
+  <section class="wrap">
+    <p>Hi this is the scene</p>
+    <button>option1</button>
+    <button>option2</button>
+  </section>
   <script>
     
+    this.scenarioData = [
+      {
+        
+      },
+      {
+
+      },
+      {
+
+      }
+    ]
+
   </script>
 
   <style>

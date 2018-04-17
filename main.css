@@ -243,3 +243,14 @@ body::-webkit-scrollbar-thumb {
     overflow: auto;
     height: 100%;
 }
+
+.wrap-anime {
+    animation: slideIn ease-in-out 1s forwards;
+}
+
+.panel-main-wrap {
+    padding: 3em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
