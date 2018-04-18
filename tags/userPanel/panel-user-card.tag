@@ -1,15 +1,44 @@
 
 <panel-user-card>
-  <section class="wrap" ref='wrap'>
+  <section class="card-wrap" ref='wrap'>
     <i class="fa fa-times" onclick={close}></i>
     <header class="user-profile">
       <img src={user.photoURL} alt={user.displayName}>
       <p>{user.displayName}</p>
     </header>
+    <main class="user-parameter">
+      <div class="parameter star">
+        <i class="fa fa-star"></i>
+        { Object.values(this.userInfo.starredArticle).length }
+      </div>
+      <div class="parameter">
+        <i class="fa fa-star"></i>
+        123
+      </div>
+      <div class="parameter">
+        <i class="fa fa-star"></i>
+        123
+      </div>
+      <div class="parameter">
+        <i class="fa fa-star"></i>
+        123
+      </div>
+    </main>
   </section>
   <script>
     that = this;
     this.user = this.parent.user;
+    this.userInfo = this.parent.userInfo
+    console.log(Object.values(this.userInfo.starredArticle).length)
+
+
+
+
+
+
+
+
+
     close() {
       that.refs.wrap.classList.add('slide-left-back');
       setTimeout(() => {
@@ -23,12 +52,8 @@
     })
   </script>
 
-  <style>
-    :scope p {
-      color: #000;
-    }
-
-    .wrap {
+  <style :scoped>
+    .card-wrap {
       position: fixed;
       right: 0;
       top: 0;
@@ -39,7 +64,7 @@
       z-index: 3;
       animation: slide-left 1s ease-in-out forwards;
     }
-    .wrap > i {
+    .card-wrap > i {
       position: absolute;
       right: 10px;
       top: 10px;
@@ -50,7 +75,7 @@
       cursor: pointer;
     }
 
-    .wrap .user-profile {
+    .card-wrap .user-profile {
       margin: 59px 0;
       border-top: 1px solid #EEEFF1;
       border-bottom: 1px solid #EEEFF1;
@@ -59,13 +84,13 @@
       height: 70px;
       padding: 20px 0;
     }
-    .wrap .user-profile img {
+    .card-wrap .user-profile img {
       width: 40px;
       height: auto;
       border-radius: 3px;
     }
 
-    .wrap.slide-left-back {
+    .card-wrap.slide-left-back {
       animation: slide-left-back 1.5s ease-in-out forwards;
     }
 
@@ -75,6 +100,24 @@
     @keyframes slide-left {
       from {right: -100%; opacity: 0}
       to {right: 0; opacity: 1}
+    }
+
+    .card-wrap .user-parameter {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      bottom: 0;
+      height: 50%;
+    }
+    
+    .card-wrap .user-parameter > *{
+      width: 50%;
+      flex: 1 1 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   </style>
 </panel-user-card>

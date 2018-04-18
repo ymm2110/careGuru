@@ -15,6 +15,7 @@
   <reminder if={homePage === "reminder"}></reminder>
 
   <script>
+   this.userInfo = this.parent.userInfo;
    this.options = [
      {
       imgSrc: "../img/app1.jpg",

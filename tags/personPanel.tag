@@ -31,10 +31,15 @@
     this.on('mount', function(){
       route.exec();
       
-     //do query from database
+
+//---------------------------very Critical Step-------------------------------------//      
+     //do query from database to get the right user info
       careGuruRef.orderByKey().equalTo(that.uid).on('value', function(e) {
-        var data = e.val()       
+        var data = Object.values(e.val())[0];       
         that.userInfo = data;
+        // that.update();
+        that.tags.panelhome.userInfo = data; // pass the data to the child component for later use
+        that.tags.panelhome.update();
       })
     })
 
@@ -46,7 +51,7 @@
 
 
   <style>
-    :scope .wrap {
+    .wrap {
       display: flex;
       width: 100%;
       height: 100%;

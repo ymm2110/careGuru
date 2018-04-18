@@ -42,8 +42,8 @@
           uid: user.uid,
           profile: user.photoURL,
           firstLogin: true,
-          surveyData: null  //data can't be undefined, otherwise can't be pushed to firebase
-
+          surveyData: null,  //data can't be undefined, otherwise can't be pushed to firebase
+          starredArticle: null
         }
         careGuruRef.child(user.uid).set(userInfo).catch(function(error) {
           console.log(error.code + error.message)

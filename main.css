@@ -254,3 +254,10 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.animate-out {
+    animation: slide-out .4s ease-in-out forwards;
+}
+@keyframes slide-out {
+    to {opacity: 0; transform: translateY(50px)}
+}

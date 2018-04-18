@@ -15,8 +15,10 @@
 
     goback() {
       //set the homepage panel parameter to none for user to go back when they are in home panel branches
-      this.parent.tags.panelhome.homePage = false; 
-      this.parent.tags.panelhome.update(); 
+      if(this.parent.tags.hasOwnProperty("panelhome")){
+        this.parent.tags.panelhome.homePage = false; 
+        this.parent.tags.panelhome.update(); 
+      }
     }
   </script>
 
