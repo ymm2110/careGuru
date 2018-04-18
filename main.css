@@ -261,3 +261,9 @@ body::-webkit-scrollbar-thumb {
 @keyframes slide-out {
     to {opacity: 0; transform: translateY(50px)}
 }
+
+
+
+.piece-wrap .fa-star.starred {
+    color: #FFC748;
+}

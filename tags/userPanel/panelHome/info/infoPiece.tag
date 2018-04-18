@@ -30,7 +30,6 @@
 
       //label the item as starred one in the database
       e.target.classList.add('starred');
-      var id = e.item.i.id;
       var key = firebase.database().ref("/careGuru/" + this.userInfo.uid + "/starredArticle").push().key;
       firebase.database().ref("/careGuru/" + this.userInfo.uid + "/starredArticle/" + key).set(e.item.i);
       e.stopPropagation();
@@ -64,9 +63,6 @@
       right: 5px;
       color: #efefef;
       transition: color 1s ease-in-out;
-    }
-    .piece-wrap .fa-star.starred {
-      color: #FFC748;
     }
 
     .piece-wrap img {
