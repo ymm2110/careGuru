@@ -2,20 +2,25 @@
 <dataView>
   <div class="question-intro">
     <div class="questionText">
-      <h2>The Insurance Is Annoying? <br> We Explain It.</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab natus architecto molestiae! Nihil fugit repudiandae modi velit delectus similique assumenda, nam laudantium. Quidem maxime repudiandae minima blanditiis doloremque, perferendis vero.</p>
+      <h2>Don't know how to deal with medical stuffs? <br> We Explain It.</h2>
+      <br>
+      <p>CareGuru aims to introduce the U.S. healthcare system to people who are not familiar with it, especially international students. Over the years, we always hear people complaining about waiting for hours in the emergency room or getting ridiculous bills after a hospital visit. Our web application aims to help these students to learn the healthcare system in the U.S. so that they can avoid such inconveniences and confusions. </p>
+      <br>
+      <p>CareGuru has three parts: a information hub for you to read all related information, a scenarios-based test center where you can check your understanding, and a personalized dashboard that remind you to stay healthy. </p>
+      <br>
+      <p>Click "Get Access" on the upper right corner to start your learning! </p>
     </div>
     <div class="questionPic">
       <img src="./img/LOGO2.png" alt="logo">
     </div>
   </div>
-  <button class="btn" onclick={dataToggle}>How People Think About Insurance</button>
+  <button class="btn" onclick={dataToggle}>How People Have The Same Questions As You Do?</button>
   <div class="dataWrap" show={showData} ref="showData">
     <div id="status" class="data-view"></div>
     <div id="usage" class="data-view"></div>
     <!-- <div id="rating" class="data-view"></div> -->
   </div>
-  
+
   <a href="#tour" class="btn"  show={showData} ref="showData" type="button">Take A Tour Around</a>
 
 
@@ -185,7 +190,8 @@
       padding: 80px 20px;
     }
     .question-intro .questionText {
-      max-width: 400px;
+      max-width: 600px;
+      font-size: 1em;
     }
     .question-intro h2 {
       font-weight: inherit;
@@ -195,7 +201,9 @@
 
     }
     .question-intro .questionPic {
-      flex-basis: 200px;
+      flex-basis: 250px;
+      margin-top: 70px;
+      margin-right: 40px;
     }
     .question-intro .questionPic img {
       width: 100%;
