@@ -1,7 +1,8 @@
 
 <sceneBoard>
   <div class="sceneBoard-wrap">
-    {this.opts.data.question}
+    <p>{this.opts.data.question}</p>
+    <p>{this.opts.data.descrip}</p>
   </div>
   <script>
     
