@@ -4,7 +4,7 @@
     <canvas id="wave" width ="938" height="400"></canvas>
     <form action="" class="email">
       <div class="input-wrap">
-        <input type="text" placeholder="Enter Email to Request Your Insurance" ref="emailInput">
+        <input type="text" placeholder="Enter Email to Join Our Maillist" ref="emailInput">
         <div class="icon" ref="icon">
           <i class="fa fa-paper-plane"></i>
         </div>
@@ -12,14 +12,16 @@
     </form>
     <footer class="footer-nav clearfix">
       <div class="nav-left">
-        <p><span></span>CareGuru 2018 All Rights Reserved</p>
+        <p>&copy; CareGuru 2018 All Rights Reserved</p>
       </div>
       <div class="nav-right">
         <ul>
-          <li>Take Tour</li>
-          <li>FAQs</li>
-          <li>Contact</li>
-          <li>Request Final Card</li>
+          <li>
+            <a href="#faqs">FAQS</a>
+          </li>
+          <li>
+            <a href="#contact">CONTACT</a>
+          </li>
         </ul>
       </div>
     </footer>
@@ -113,14 +115,19 @@
     .footer-nav .nav-left{
       float: left;
 
-    }    
+    }
     .footer-nav .nav-right{
       float: right;
       margin-right: 20px;
+
     }
     .footer-nav .nav-right li{
       display: inline-block;
       margin-left: 20px;
+    }
+
+    .footer-nav .nav-right li a {
+      color: inherit;
     }
 
     .email {
@@ -128,7 +135,7 @@
       bottom: 55%;
       left: 0;
       right: 0;
-    
+
     }
 
     .email .input-wrap {
