@@ -3,9 +3,9 @@
   <section class="scene-wrap wrap-anime" if={!gameover}>
     <p>Hello! I'm Greg. I'm 20 years old. I'm a junior in Boston College junior. I'm an international student from Singapore, and I have BC’s student health insurance.
 </p>
+    <sceneActionfeedback data = {feedback} if = {feedback}></sceneActionfeedback>
     <sceneBoard data = {currentScene}></sceneBoard>
     <sceneActionWarn data = {currentOption} if = {currentOption}></sceneActionWarn>
-    <sceneActionfeedback data = {feedback} if = {feedback}></sceneActionfeedback>
     <div class="button-wrap">
       <button onclick={option} id = {i.optionLinkTo} each = {i in currentScene.options}>{i.optionName}</button>
     </div>
