@@ -203,7 +203,6 @@
     .question-intro .questionPic {
       flex-basis: 250px;
       margin-top: 70px;
-      margin-right: 40px;
     }
     .question-intro .questionPic img {
       width: 100%;
