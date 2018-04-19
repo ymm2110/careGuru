@@ -12,17 +12,17 @@
       this.parent.feedback = this.opts.data.optionWarn.choosedFeedback;
 
       //change the property of the character
-      var bloodChange = this.opts.data.optionResults.blood;
+      var healthChange = this.opts.data.optionResults.health;
       var moneyChange = this.opts.data.optionResults.money;
-      var blood = this.parent.blood;
+      var health = this.parent.health;
       var money = this.parent.money;
-      var leftBlood = this.calc(blood, money, bloodChange, moneyChange).leftBlood;
-      var leftMoney = this.calc(blood, money, bloodChange, moneyChange).leftMoney;
-      this.parent.blood = leftBlood;
+      var lefthealth = this.calc(health, money, healthChange, moneyChange).lefthealth;
+      var leftMoney = this.calc(health, money, healthChange, moneyChange).leftMoney;
+      this.parent.health = lefthealth;
       this.parent.money = leftMoney;
 
       //judge whether to end the game
-      if(leftBlood <= 5 || leftMoney <= 0) {
+      if(lefthealth <= 5 || leftMoney <= 0) {
         this.parent.gameover = true;
       }
 
@@ -33,11 +33,11 @@
       this.parent.update();
     }
 
-    calc(blood, money, bloodChange, moneyChange) {
-      var leftBlood = blood + bloodChange;
+    calc(health, money, healthChange, moneyChange) {
+      var lefthealth = health + healthChange;
       var leftMoney = money + moneyChange;
       return {
-        leftBlood: leftBlood,
+        lefthealth: lefthealth,
         leftMoney: leftMoney
       }
     }

@@ -2,7 +2,7 @@
 <sceneActionfeedback>
   <p>{this.opts.data}</p>
   <script>
-    
+
   </script>
 
   <style>
