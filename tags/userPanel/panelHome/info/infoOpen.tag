@@ -6,7 +6,7 @@
       <p>{this.opts.data.content}</p>
     </main>
     <footer class="card-footer">
-      <div class={ "foot-left": true, starred: this.opts.data.starred } onclick={star}>
+      <div class={ "foot-left": true, starred: this.opts.data.starred } onclick={star} id = {this.opts.data.id}>
         <i class="fa fa-star"></i> STAR
       </div>
       <div class="foot-right" onclick={close}>
@@ -38,9 +38,9 @@
         //remove star label from the firebase database
         if (alreadyStarred) {
           var key = that.opts.data.firebaseId;
-          console.log(key)
           firebase.database().ref("/careGuru/" + this.userInfo.uid + "/starredArticle/" + key).set(null);
           e.currentTarget.classList.remove('starred');
+          this.updateParentStarEffect(e);  
           return;
         }
 
@@ -48,6 +48,15 @@
         e.currentTarget.classList.add('starred');
         var key = firebase.database().ref("/careGuru/" + that.userInfo.uid + "/starredArticle").push().key;
         firebase.database().ref("/careGuru/" + that.userInfo.uid + "/starredArticle/" + key).set(that.opts.data);
+      
+        //update the parent info.tag view layer
+        this.updateParentStarEffect(e);
+      }
+
+      updateParentStarEffect(e) {
+        var infoPieceId = e.currentTarget.id;
+        this.parent.infoPieceData[infoPieceId].starred = !this.parent.infoPieceData[infoPieceId].starred;
+        this.parent.update();
       }
   </script>
 

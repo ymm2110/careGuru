@@ -24,6 +24,7 @@
 
 
   <script>
+    var that = this;
     close() {
       this.parent.loginPanel = false;
       this.parent.update();
@@ -36,23 +37,49 @@
         var user = result.user;
         // ...
         route(user.uid);
-        //initialize user info object
-        var userInfo = {
-          name: user.displayName,
-          uid: user.uid,
-          profile: user.photoURL,
-          firstLogin: true,
-          surveyData: null,  //data can't be undefined, otherwise can't be pushed to firebase
-          starredArticle: null
-        }
-        careGuruRef.child(user.uid).set(userInfo).catch(function(error) {
-          console.log(error.code + error.message)
-        });
 
-        that.parent.user = user;
-        // careGuruRef.child()
-        that.parent.update();
+        //should detect whether the uer already exist there in the firebase, otherwise it's gonna overwrite previours data
+        var ifNewUser = true;
+        var existedUser = undefined;
+        var existedUserId = undefined;
 
+        careGuruRef.on('value', (snapshot)=>{
+          // console.log();
+          userIds = Object.keys(snapshot.val());
+          userIds.forEach((i)=>{
+            if(user.uid === i) {
+              ifNewUser = false;
+              console.log('this is a existed user');
+              existedUserId = i;
+              return
+            }
+          })
+        }).then(
+          function() {
+            if (ifNewUser) {
+              //initialize user info object
+              console.log('this is a new user')
+              var userInfo = {
+                name: user.displayName,
+                uid: user.uid,
+                profile: user.photoURL,
+                firstLogin: true,
+                surveyData: null,  //data can't be undefined, otherwise can't be pushed to firebase
+                starredArticle: null
+              }
+
+              careGuruRef.child(user.uid).set(userInfo).catch(function (error) {
+                console.log(error.code + error.message)
+              });
+            } else {
+               console.log('the user already exist');
+            }
+            that.parent.user = user;
+            that.parent.update(); 
+          }
+        )
+
+        
       }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
