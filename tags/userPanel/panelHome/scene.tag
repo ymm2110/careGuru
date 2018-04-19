@@ -3,25 +3,42 @@
   <section class="scene-wrap wrap-anime">
     <sceneBoard data = {currentScene}></sceneBoard>
     <div class="button-wrap">
-      <button onclick={option1} id = {currentScene.options.option1.optionLinkTo}>{currentScene.options.option1.optionName}</button>
-      <button onclick={option2} id = {currentScene.options.option2.optionLinkTo}>{currentScene.options.option2.optionName}</button>
+      <button onclick={option1} id = {i.optionLinkTo} each = {i in currentScene.options}>{i.optionName}</button>
     </div>
   </section>
   <script>
+    this.blood = 100;
+    this.money = 1000;
     this.scenarioData = [
       {
-        question: "question1:xxxxxxxxx?",
+        question: "question1",
         descrip: "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
         imgurl: "sadsadada",
         sceneId: 1,
         options: {
           option1: {
             optionName: "option1 from scene1",
-            optionLinkTo: 2
+            optionLinkTo: 2,
+            optionResults: {
+              blood: 10,
+              money: 100
+            },
+            optionWarn: {
+              warnName: "Are you sure you want to choose option1 from scene1? This will ......",
+              choosedFeedback: "glad you choose this question"
+            },
           },
           option2: {
             optionName: "option2 from scene1",
-            optionLinkTo: 1
+            optionLinkTo: 2,
+            optionResults: {
+              blood: 10,
+              money: 100
+            },
+            optionWarn: {
+              warnName: "Are you sure you want to choose option1 from scene1? This will ......",
+              choosedFeedback: "glad you choose this question"
+            },
           }
         }  
       },
@@ -36,8 +53,16 @@
             optionLinkTo: 3
           },
           option2: {
-            optionName: "question3:xxxxxxxxx?",
+            optionName: "option2 from scene2",
             optionLinkTo: 1
+          },
+          option3: {
+            optionName: "option3 from scene2",
+            optionLinkTo: 4
+          },
+          option4: {
+            optionName: "option4 from scene2",
+            optionLinkTo: 2
           }
         }  
       },
@@ -82,11 +107,11 @@
       this.currentScene = this.scenarioData[nextSceneId-1];
       console.log(nextSceneId)
     }
-    option2(e) {
-      var nextSceneId = e.currentTarget.id;
-      this.currentScene = this.scenarioData[nextSceneId-1];
-      console.log(nextSceneId)
-    }
+    // option2(e) {
+    //   var nextSceneId = e.currentTarget.id;
+    //   this.currentScene = this.scenarioData[nextSceneId-1];
+    //   console.log(nextSceneId)
+    // }
 
   </script>
 
@@ -104,9 +129,10 @@
       text-align: center;
       margin: 30px auto;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
     .scene-wrap .button-wrap > * {
-      
+      width: 50%;
     }
 
 

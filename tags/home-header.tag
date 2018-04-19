@@ -8,9 +8,6 @@
         </div>
         <ul class="nav-right">
           <li>
-            <a href="#tour">TOUR</a>
-          </li>
-          <li>
             <a href="#faqs">FAQS</a>
           </li>
           <li>
