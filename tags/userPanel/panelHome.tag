@@ -1,7 +1,7 @@
 
 <panelHome>
   <div class="home-wrap" if={!homePage}>
-    <h1>Hi this is home</h1>
+    <!-- <h1>Hi this is home</h1> -->
     <section class="wrap tobeanimate">
       <div class="home-option" each = {i in options} onclick={enter}>
         <img src={i.imgSrc} alt={i.title} >
@@ -46,9 +46,6 @@
   </script>
 
   <style>
-    .home-wrap {
-
-    }
 
     h1 {
       text-align: center;
@@ -61,7 +58,7 @@
       text-align: center;
       flex-wrap: wrap;
       overflow: auto;
-      height: 450px;
+      height: calc(100% - 59px);
       animation: slideIn ease-in-out 1s forwards;
     }
 

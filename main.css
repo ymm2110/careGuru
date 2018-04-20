@@ -267,3 +267,62 @@ body::-webkit-scrollbar-thumb {
 .piece-wrap .fa-star.starred {
     color: #FFC748;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive design on mobile */
+@media (max-width: 450px) {
+
+    /* in the home page section */
+    .header > .main-inner > .clearfix > .logo > a > img {
+        height: 70%;
+        padding: 5px 0;
+        width: auto;
+    }
+
+   /* in the panel home section */
+    .wrap {
+        flex-direction: column;
+    }
+
+    .wrap .sidebar {
+        max-width: unset !important;
+        width: 100%;
+        flex-grow: initial !important;
+    }
+    .wrap .sidebar ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .wrap .sidebar ul li{
+        padding: 7px 5px;
+        vertical-align: middle;
+    }
+    
+    .wrap .sidebar ul > li.activeSideBar::after{ 
+        height: 2px;
+        width: 100%;
+        bottom: -40%;
+    }
+    
+    .home-wrap > .wrap {
+        display: block;
+        height: calc(100% - 110px);
+    }
+
+    .info-wrap {
+        display: block;
+        padding: 0;
+    }
+
+}

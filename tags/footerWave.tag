@@ -38,7 +38,8 @@
 
       var canvas = document.getElementById('wave');
       var ctx = canvas.getContext('2d');
-      canvas.width = window.innerWidth - 15;
+      // on mobiles, there is no scroll bar while on browser, the scroll bar taks 15px width
+      window.innerWidth <= 400?canvas.width = window.innerWidth:canvas.width =  window.innerWidth - 15;
       var waves = ["#27314D","#414B60","#F07277","#F29098","#6FCFE9"]
       var i = 0;
       function draw() {

@@ -81,12 +81,9 @@
     }
     
     header > nav > ul > li > img{
-      width: 40px;
-      height: auto;
-      position: absolute;
-      top: 50%;
-      margin-top: -20px;
+      height: 30px;
       left: 10%;
+      vertical-align: middle;
     }
 
     header > nav > ul > li.user-menu > .submenu{
@@ -104,7 +101,7 @@
       animation: menuActive .3s ease-in-out forwards;
     }
     @keyframes menuActive {
-      to{opacity: 1;bottom: -240%;z-index: 2;}
+      to{opacity: 1;bottom: -227%;z-index: 2;}
     }
 
 

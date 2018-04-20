@@ -51,7 +51,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin: 10px 0;
+      margin: 10px auto;
       position: relative;
       max-height: 100px;
       transition: all 0.5s ease-in-out;
