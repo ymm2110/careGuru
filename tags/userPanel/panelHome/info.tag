@@ -10,7 +10,7 @@
 
     var that = this;
     this.infoPieceData = [
-      { //Part 1 - Health Care System
+      {
         imgurl: './../../../../img/app1.jpg',
         title: 'Basic Information',
         content: 'Almost all care is provided for by the private sector, though some hospital run by the government. 70% hospitals are non-profit, while the rest are for-profit. Most Pharmaceutical and medical device company are run by private sector. Research pay from both public and private (but more from private) side.'
@@ -18,7 +18,7 @@
       {
         imgurl: './../../../../img/app1.jpg',
         title: 'Medicare',
-        content: 'National social insurance program run and administered by the federal government 15%. US citizens covered by medicare, most of them are elderly people. It is a Single payer system: all people are covered by one type of insurance. Part A: covers you if you are hospitalized, pretty much free if you are over 65, almost everyone is able to get it. Part B: covers outpatient services, sometimes deferred by people who are still getting insurance from their jobs, has a pretty low deductible, co-insurance is 20%. Part C (a.k.a Medicare Advantage) opportunity for private companies to offer Medicare-like benefits as an alternative to other Medicare benefits. Part D. Contains the prescription drug plans,  designed and run by private insurance companies, approved and paid by the Federal Government, individual beneficiaries pick the plan they like.'
+        content: 'National social insurance program run and administered by the federal government 15%. US citizens covered by medicare, most of them are elderly people. It is a Single payer system: all people are covered by one type of insurance. Part A: covers you if you are hospitalized, pretty much free if you are over 65, almost everyone is able to get it. Part B: covers outpatient services, sometimes deferred by people who are still getting insurance from their jobs, has a pretty low deductible, co-insurance is 20%. Part C (a.k.a Medicare Advantage) opportunity for private companies to offer Medicare-like benefits as an alternative to other Medicare benefits. Part D. Contains the prescription drug plans, designed and run by private insurance companies, approved and paid by the Federal Government, individual beneficiaries pick the plan they like.'
       },
       {
         imgurl: './../../../../img/app1.jpg',
@@ -29,8 +29,8 @@
         imgurl: './../../../../img/app1.jpg',
         title: 'Conclusion',
         content: 'Private insurance for most, Medicare and Medicaid for some, and VA and Tricare for few.'
-      },
-      { //Part 2- Health Insurance Overview
+      },//Part 2- Health Insurance Overview
+      {
         imgurl: './../../../../img/app1.jpg',
         title: 'Premium',
         content: 'The amount of money the insurance company is going to charge you for the insurance policy you are purchasing.'
@@ -73,7 +73,7 @@
       {
         imgurl: './../../../../img/app1.jpg',
         title: 'Coverage for pre-existing conditions',
-        content: 'All Marketplace plans must cover treatment for pre-existing medical conditions. No insurance plan can reject you, charge you more, or refuse to pay for essential health benefits for any condition you had before your coverage started. Once you’re enrolled, the plan can’t deny you coverage or raise your rates based only on your health. Medicaid and the Children's Health Insurance Program (CHIP) also can't refuse to cover you or charge you more because of your pre-existing condition.'
+        content: 'All Marketplace plans must cover treatment for pre-existing medical conditions. No insurance plan can reject you, charge you more, or refuse to pay for essential health benefits for any condition you had before your coverage started. Once you’re enrolled, the plan can’t deny you coverage or raise your rates based only on your health. Medicaid and the Children Health Insurance Program (CHIP) also cannot refuse to cover you or charge you more because of your pre-existing condition.'
       },
       {
         imgurl: './../../../../img/app1.jpg',
@@ -84,8 +84,8 @@
         imgurl: './../../../../img/app1.jpg',
         title: 'File A Claim',
         content: 'When: A claim is a detailed invoice that your health-care provider (such as your doctor, clinic, or hospital) sends to the health insurer. This invoice shows exactly what services you received. Here is how it works – You get a service from a health care provider. The health care provider submits a claim to Unity. The medical billing insurance claims process starts when a healthcare provider treats a patient and sends a bill of services provided to a designated payer, which is usually a health insurance company. Take Aetna as a sample case, here are the steps you need to do: 1). Click "Claims Center," then "Submit claims". 2).Complete your claim online. 3).Copy, scan and upload your supporting documents, including itemized bills, original receipts. 4). Click "submit claim" to complete the process. 5). After you submit your completed claim form, you will receive a notification by e-mail to confirm that it has been submitted successfully.'
-      },
-      { //Part 3- Health Care Provider
+      },//Part 3- Health Care Provider
+      {
         imgurl: './../../../../img/app1.jpg',
         title: '3 general providers',
         content: 'Health Care Professionals. Hospitals / Clinics. Student Health Center / Company Health Center'
@@ -98,7 +98,7 @@
       {
         imgurl: './../../../../img/app1.jpg',
         title: 'How to find providers?',
-        content: '1). Emergency Room VS. Urgent Care Center. emergency room priorotize based on your situation. 2). Primary Care Provider (PCP). 3). Doctor Referral. Why do I need a referral? Read more -- "https://www.tuftsmedicarepreferred.org/members/using-your-plan/what-referral-and-why-do-i-need-one" '
+        content: '1). Emergency Room VS. Urgent Care Center. emergency room priorotize based on your situation. 2). Primary Care Provider (PCP). 3). Doctor Referral. Why do I need a referral? Read more -- "https://www.tuftsmedicarepreferred.org/members/using-your-plan/what-referral-and-why-do-i-need-one"'
       },
     ]
 
