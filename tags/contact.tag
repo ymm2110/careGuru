@@ -11,8 +11,9 @@
       <form>
         <input type="text" placeholder="Name">
         <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Message">
+        <input type="text" id="msg" placeholder="Message">
       </form>
+      <button type="button">Send it !</button>
 
     </div>
   </home-header>
@@ -85,7 +86,7 @@
       position: relative;
     }
     .header .head-middle p:after{
-      content: "";
+      /* content: ""; */
       position: absolute;
       bottom: -10px;
       left: 0;
@@ -96,6 +97,38 @@
       border-radius: 50%;
       background: rgb(255,255,255);
       background: linear-gradient(90deg, rgba(255,255,255,0.38279061624649857) 0%, rgba(255,255,255,0.5872724089635855) 50%, rgba(255,255,255,0.3295693277310925) 100%);
+    }
+    .form {
+      position: absolute;
+      text-align: center;
+      left: 50;
+      right: 50;
+      width: 35%;
+      transform: translate(100%, 10%);
+    }
+    input {
+      width: 100%;
+      margin: 20px 0;
+      background: rgba(0,0,0,0);
+      border: none;
+      border-bottom: 1px solid white;
+    }
+    ::-webkit-input-placeholder {
+      color: white;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+    }
+    #msg {
+      margin-top: 40px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      background: #D19B9B;
+      color: white;
     }
   </style>
 </contact>
