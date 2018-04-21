@@ -7,8 +7,12 @@
         We are always working to make your experience better. Understanding your concerns help us improve. Tell us what you think of our site, products, and services. Did you have a great experience? We'd love to hear from you!
       </p>
     </div>
-    <div class="wrapper">
-
+    <div class="form">
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="E-mail">
+        <input type="text" placeholder="Message">
+      </form>
 
     </div>
   </home-header>
