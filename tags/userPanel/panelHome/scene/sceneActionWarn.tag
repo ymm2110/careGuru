@@ -1,8 +1,8 @@
 
 <sceneActionWarn>
   <p> {this.opts.data.optionWarn.warnName}</p>
-  <button onclick={confirm}>YES</button>
-  <button onclick={cancle}>NO</button>
+  <button onclick={confirm}>Continue with This Option</button>
+  <button onclick={cancle}>Choose Again</button>
   <script>
     confirm() {
       //change the scene and switch the warn and feedback
