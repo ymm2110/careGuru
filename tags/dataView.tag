@@ -50,7 +50,7 @@
             type: 'pie'
           },
           title: {
-            text: 'Status Categories of Survey Participants'
+            text: 'Who is taking the survey?'
           },
           tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
