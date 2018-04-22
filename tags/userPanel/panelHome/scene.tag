@@ -205,7 +205,7 @@
             },
             optionWarn: {
               warnName: "Ahhh are you sure? Emergency medical care and examinations are not cheap. Plus you already paid a lot for your insurance plan. Why not save these money for a trip to Alaska?",
-              choosedFeedback: "glad you choose this option1"
+              choosedFeedback: "Since you didn’t provide the hospital your insurance information,the care provider sent you bills directly."
             },
           },
           option2: {
@@ -217,7 +217,7 @@
             },
             optionWarn: {
               warnName: "Student health center is a good resource when you have any question about medical issues. Give them a call when you don’t know where to find answers. But will someone pick up the phone in Christmas?",
-              choosedFeedback: "glad you choose this option2"
+              choosedFeedback: "Awww the office was closed because of the holiday. Lucky, you know a friend who works as the receptionist at student health, and he directed you to the correct website to find the information. Your insurance company covered a large portion of your bills! Remember to respond to phone calls and mails from your insurance company to avoid any inconveniences."
             },
           },
           option3: {
@@ -229,7 +229,7 @@
             },
             optionWarn: {
               warnName: "Everyone in you school use the same policy documents to check their benefits. But clearly the forms is asking your personal information. Are you sure this brochure can give you the correct information?",
-              choosedFeedback: "glad you choose this option3"
+              choosedFeedback: "You found your policy brochure online, and mistakenly thought the policy number was your insurance ID number. The insurance company couldn’t located you. Therefore, the care provider sent you bills directly."
             },
           },
           option4: {
@@ -241,11 +241,55 @@
             },
             optionWarn: {
               warnName: "You’re looking at the correct place. Once you log in with our student id (or other forms of credentials), you’ll be able to see a digital copy of your insurance card. Do you know what’s GRP and which number is your insurance ID? ",
-              choosedFeedback: "glad you choose this option4"
+              choosedFeedback: "Your insurance company covered a large portion of your bills! Remember to respond to phone calls and mails from your insurance company to avoid any inconveniences."
             },
           }
         }
       },
+      {
+        question: " As Greg, What can you do?",
+        descrip: "Weeks later, Greg received bills that contained visit fees, laboratory fees, and doctor fees. Greg found the amount was too high to afford. He wanted to see if he could still use his insurance to cover some of the expense.",
+        imgurl: "sadsadada",
+        sceneId: 5,
+        options: {
+          option1: {
+            optionName: "Go to your insurance website and follow instruction about how to fill a claim",
+            optionLinkTo: 6,
+            optionResults: {
+              health: +0,
+              money: +30
+            },
+            optionWarn: {
+              warnName: "Most insurance companies request you to fill out claim forms and provide supporting documents like your bills and receipts. Be sure to check all the requirement carefully and keep all the document.",
+              choosedFeedback: "You mailed your claim and other documents. A few weeks later, your insurance company mailed their reimbursement decision and an updated bill to you. "
+            },
+          },
+          option2: {
+            optionName: "Call student health office to request reimbursement.",
+            optionLinkTo: 6,
+            optionResults: {
+              health: +0,
+              money: +30
+            },
+            optionWarn: {
+              warnName: "Insurance companies handle most of your medical expense, so the student health office can’t offer your reimbursement directly. However, contact your school to ask questions about filing a claim and basically all other questions about health you may have.",
+              choosedFeedback: "Student health staff helped you to find the claim form and explained how to file the form. You mailed your claim and other required documents. A few weeks later, your insurance company mailed their reimbursement decision and an updated bill to you."
+            },
+          },
+          option3: {
+            optionName: "Call hospital to discuss the bill with them.",
+            optionLinkTo: 6,
+            optionResults: {
+              health: +0,
+              money: +30
+            },
+            optionWarn: {
+              warnName: "Hospital or other care providers may waive some of the charges if the patients can prove significant financial hardship. However, they don’t provide insurance benefits. Call your insurance company or student health center to ask what to do.",
+              choosedFeedback: "Insurance company staff helped you to find the claim form and explained how to file the form. You mailed your claim and other required documents. A few weeks later, your insurance company mailed their reimbursement decision and an updated bill to you."
+            },
+          },
+        }
+      }
 
     ]
 
