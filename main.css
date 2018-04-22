@@ -268,7 +268,20 @@ body::-webkit-scrollbar-thumb {
     color: #FFC748;
 }
 
-
+.important {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    position: relative;
+    transform: translateX(10px);
+    cursor: pointer;
+    background: transparent;
+}
+.important:hover {
+    background: #fff;
+    color: #DE838A;
+    box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3), -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
+}
 
 
 

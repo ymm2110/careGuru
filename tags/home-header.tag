@@ -13,7 +13,7 @@
           <li>
             <a href="#contact">CONTACT</a>
           </li>
-          <li id="login" onclick={loginTrigger} if={!this.parent.user}>GET ACCESS</li>
+          <li class="important" onclick={loginTrigger} if={!this.parent.user}>GET ACCESS</li>
         </ul>
       </nav>
 
@@ -38,7 +38,7 @@
   <style>
     .header {
       width: 100%;
-      height: 600px;
+      min-height: 600px;
       background: url("./img/app1.jpg") no-repeat;
       background-size: cover;
       background-position: center;
@@ -111,17 +111,5 @@
       color: inherit;
     }
 
-    .header nav .nav-right #login {
-      border: 1px solid #fff;
-      border-radius: 4px;
-      position: relative;
-      transform: translateX(10px);
-      cursor: pointer;
-    }
-    .header nav .nav-right #login:hover {
-      background: #fff;
-      color: #DE838A;
-      box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3), -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
-    }
   </style>
 </home-header>

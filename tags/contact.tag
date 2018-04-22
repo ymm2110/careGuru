@@ -7,53 +7,55 @@
         We are always working to make your experience better. Understanding your concerns help us improve. Tell us what you think of our site, products, and services. Did you have a great experience? We'd love to hear from you!
       </p>
     </div>
-    <div class="form">
-      <form>
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="E-mail">
-        <input type="text" id="msg" placeholder="Message">
-      </form>
-      <button type="button">Send it !</button>
-
-    </div>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="text" placeholder="E-mail">
+      <input type="text" id="msg" placeholder="Message">
+      <button type="submit" class="important">Send it !</button>
+    </form>
   </home-header>
 
 
-  <!--The following is "About" page content-->
-  <div class="container">
-    <div each= { item in personalInfo }>
-      <div class="row">
-          <img class="img" src={item.img}>
-          <h4 class="personalInfo">{item.name}</h4>
-          <h6>{item.role}</h6>
-          <h6>{item.email}</h6>
-      </div>
+  <!--The following is "About" page content   -   credit to Zhiping Zhang - Good Job -->   
+  <div class="gallery">
+    <div each= { item in personalInfo } class="individual" >
+          <div class="main-info">
+            <div class="main-info-inner">
+              <img class="img" src={item.img}>
+              <h4 class="personalInfo">{item.name}</h4>
+              <h6>{item.role}</h6>
+            </div>
+          </div>
+          <div class="main-bottom">
+            <p>{item.email}</p>
+          </div>
     </div>
   </div>
 
+  <footerInner></footerInner>
   <script>
 
   this.personalInfo = [
     {
-      name: "Team Member: Yuntong Man",
+      name: "Yuntong Man",
       img: "../img/Yuntong.png",
       role: "Instructional Designer",
       email: "Email: ymm2110@tc.columbia.edu",
     },
     {
-      name: "Team Member: Shuai Yuan",
+      name: "Shuai Yuan",
       img: "../img/Shuai.jpeg",
       role: "Web Developer",
       email: "Email: sy2729@tc.columbia.edu",
     },
     {
-      name: "Team Member: Yigu Liang",
+      name: "Yigu Liang",
       img: "../img/Yigu.png",
       role: "Subject Matter Expert",
       email: "Email: yl3605@tc.columbia.edu",
     },
     {
-      name: "Team Member: Zhiping Zhang",
+      name: "Zhiping Zhang",
       img: "../img/Zhiping.png",
       role: "UX Designer",
       email: "Email: zz2499@tc.columbia.edu",
@@ -92,22 +94,20 @@
       background: rgb(255,255,255);
       background: linear-gradient(90deg, rgba(255,255,255,0.38279061624649857) 0%, rgba(255,255,255,0.5872724089635855) 50%, rgba(255,255,255,0.3295693277310925) 100%);
     }
-    .form {
-      position: absolute;
+    form {
       text-align: center;
-      left: 50;
-      right: 50;
       width: 35%;
-      transform: translate(100%, 10%);
+      margin: 20px auto;
+      padding: 20px;
     }
-    input {
+    form input {
       width: 100%;
       margin: 20px 0;
       background: rgba(0,0,0,0);
       border: none;
       border-bottom: 1px solid white;
     }
-    ::-webkit-input-placeholder {
+    input::-webkit-input-placeholder {
       color: white;
       letter-spacing: 1.5px;
       font-size: 12px;
@@ -116,13 +116,56 @@
       margin-top: 40px;
     }
     button {
-      padding: 10px 20px;
+      padding: 6px 20px;
       margin-top: 20px;
       font-size: 16px;
-      border: none;
-      border-radius: 4px;
-      background: #D19B9B;
-      color: white;
     }
+
+    .gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 50px 0;
+    }
+    .gallery .individual {
+      margin: 30px 0;
+      width: 250px;
+      height: 300px;
+      border: 1px solid #F2F4F5;
+      border-radius: 4px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.04);
+    }
+    .gallery .individual .main-info {
+      height: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .gallery .individual .main-info .main-info-inner {
+      text-align: center;
+    }
+
+
+    .gallery .individual .main-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 4px;
+      box-shadow: inset -2px -2px 15px 3px #DC848B, 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    .gallery .individual .main-bottom {
+      /* text-align: center; */
+      height: calc(100% - 240px);
+      background-color: #FCFBFE;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: inherit;
+    }
+
+
+
   </style>
 </contact>
