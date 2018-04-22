@@ -17,7 +17,7 @@
 
 
   <!--The following is "About" page content   -   credit to Zhiping Zhang - Good Job -->   
-  <div class="gallery">
+  <div class="gallery tobeanimate">
     <div each= { item in personalInfo } class="individual" >
           <div class="main-info">
             <div class="main-info-inner">
@@ -61,6 +61,10 @@
       email: "Email: zz2499@tc.columbia.edu",
     }
   ]
+
+  this.on('mount', function() {
+    detectScroll();
+  })
   </script>
 
   <style>

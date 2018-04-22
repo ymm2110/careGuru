@@ -16,7 +16,9 @@
     <footerWave></footerWave>
 
   <script>
-
+    this.on('mount', function() {
+      detectScroll();
+    })
   </script>
 
   <style>

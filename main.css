@@ -283,7 +283,26 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.3), -3px -3px 10px 0 rgba(255, 255, 255, 0.3);
 }
 
+tobeanimate {
+    /* transition: all 2s; */
+    opacity: 0;
+}
 
+.slideIn {
+    /* opacity: 1; */
+    animation: slideIn ease-in-out 1.3s forwards;
+}
+
+@keyframes slideIn{
+    from {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 

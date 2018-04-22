@@ -1,6 +1,6 @@
 
 <dataView>
-  <div class="question-intro">
+  <div class="question-intro tobeanimate">
     <div class="questionText">
       <h2>Don't know how to deal with medical stuffs? <br> We Explain It.</h2>
       <br>
@@ -39,6 +39,9 @@
 
 
     this.on('mount', function () {
+
+        detectScroll();
+
         Highcharts.chart('status', {
           chart: {
             plotBackgroundColor: null,
@@ -173,6 +176,7 @@
       //     }
       //   }]
       // });
+
 
 
       })
