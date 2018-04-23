@@ -1,6 +1,6 @@
 
-<panelHome>
-  <div class="home-wrap" if={!homePage}>
+<scenarioSelection>
+  <div class="home-wrap" if={!scenarioSelection}>
     <!-- <h1>Hi this is home</h1> -->
     <section class="wrap tobeanimate">
       <div class="home-option" each = {i in options} onclick={enter}>
@@ -10,32 +10,32 @@
     </section>
   </div>
 
-  <info if={homePage === "must-know-info"}></info>
-  <scenarioSelection if={homePage === "learning-scenario"}></scenarioSelection>
-  <reminder if={homePage === "reminder"}></reminder>
+  <scenario1 if={scenarioSelection === "scenario1"}></scenario1>
+  <scenario2 if={scenarioSelection === "scenario2"}></scenario2>
+  <scenario3 if={scenarioSelection === "scenario3"}></scenario3>
 
   <script>
    this.userInfo = this.parent.userInfo;
    this.options = [
      {
-      imgSrc: "../img/app1.jpg",
-      title: "Must-Know Information",
-      homePage: "must-know-info"
+      imgSrc: "../img/scenarioIcon.png",
+      title: "Scenario 1",
+      scenarioSelection: "scenario1"
      },
      {
-      imgSrc: "../img/app1.jpg",
-      title: "Learning Scenarios",
-      homePage: "learning-scenario"
+      imgSrc: "../img/scenarioIcon.png",
+      title: "scenario 2",
+      scenarioSelection: "scenario2"
      },
      {
-      imgSrc: "../img/app1.jpg",
-      title: "Personalized reminder",
-      homePage: "reminder"
+      imgSrc: "../img/scenarioIcon.png",
+      title: "scenario 3",
+      scenarioSelection: "scenario3"
      }
    ]
 
     enter(e) {
-      this.homePage = e.item.i.homePage;
+      this.scenarioSelection = e.item.i.scenarioSelection;
     }
 
     this.on('before-unmount', function() {
@@ -89,4 +89,4 @@
 
     }
   </style>
-</panelHome>
+</scenarioSelection>

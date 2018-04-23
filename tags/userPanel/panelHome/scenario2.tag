@@ -1,8 +1,7 @@
 
-<scene>
+<scenario2>
   <section class="scene-wrap wrap-anime" if={!gameover}>
-    <p>Hello! I'm Greg. I'm 20 years old. I'm a junior in Boston College junior. I'm an international student from Singapore, and I have BC’s student health insurance.
-</p>
+    <p>Scenario2 -- Content to be udated </p>
     <sceneActionfeedback data = {feedback} if = {feedback}></sceneActionfeedback>
     <sceneBoard data = {currentScene}></sceneBoard>
     <sceneActionWarn data = {currentOption} if = {currentOption}></sceneActionWarn>
@@ -326,4 +325,4 @@
 
 
   </style>
-</scene>
+</scenario2>
