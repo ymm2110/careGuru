@@ -2,8 +2,8 @@
 <panel-sidebar>
     <ul>
       <li><img src="./../img/logo2.png" alt="logo"></li>
-      <li class={activeSideBar: currentPage === 'home'}><a href="#{this.parent.parent.user.uid}/home" onclick={goback}><i class="fa fa-home"></i></a></li>
-      <li class={activeSideBar: currentPage === 'product'}><a href="#{this.parent.parent.user.uid}/product"><i class="fa fa-tachometer"></i></a></li>
+      <li class={activeSideBar: currentPage === 'home'}><a href="#{this.parent.parent.user.uid}/home" onclick={goback} data-message="panelhome"><i class="fa fa-home"></i></a></li>
+      <li class={activeSideBar: currentPage === 'product'}><a href="#{this.parent.parent.user.uid}/product" onclick={goback} data-message="panelproduct"><i class="fa fa-tachometer"></i></a></li>
       <li class={activeSideBar: currentPage === 'community'}><i class="fa fa-comment"></i></li>
       <li class={activeSideBar: currentPage === 'notification'}><i class="fa fa-bell"></i></li>
     </ul>
@@ -13,9 +13,9 @@
       that.currentPage = that.parent.currentPage; //obtain the current page from parent tag to switch mode
     })
 
-    goback() {
+    goback(e) {
       //set the homepage panel parameter to none for user to go back when they are in home panel branches
-      if(this.parent.tags.hasOwnProperty("panelhome")){
+      if(this.parent.tags.hasOwnProperty(e.target.dataset.message)){
         this.parent.tags.panelhome.homePage = false; 
         this.parent.tags.panelhome.update(); 
       }

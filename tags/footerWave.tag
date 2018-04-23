@@ -10,21 +10,7 @@
         </div>
       </div>
     </form>
-    <footer class="footer-nav clearfix">
-      <div class="nav-left">
-        <p>&copy; CareGuru 2018 All Rights Reserved</p>
-      </div>
-      <div class="nav-right">
-        <ul>
-          <li>
-            <a href="#faqs">FAQS</a>
-          </li>
-          <li>
-            <a href="#contact">CONTACT</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <footerInner></footerInner>
   </div>
 
   <script>
@@ -92,45 +78,6 @@
       bottom: 0;
       height: 10px;
     }
-
-    .footer-nav {
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      right: 0;
-      color: #8D96A2;
-      padding: 30px 20px;
-    }
-    .footer-nav::before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 70%;
-      height: 1px;
-      border-radius: 50%;
-      background: #3C455E;
-    }
-    .footer-nav .nav-left{
-      float: left;
-
-    }
-    .footer-nav .nav-right{
-      float: right;
-      margin-right: 20px;
-
-    }
-    .footer-nav .nav-right li{
-      display: inline-block;
-      margin-left: 20px;
-    }
-
-    .footer-nav .nav-right li a {
-      color: inherit;
-    }
-
     .email {
       position: absolute;
       bottom: 55%;
@@ -189,5 +136,14 @@
       color: #777979;
       font-size: 0.9em;
     }
+
+
+    .footer-nav {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        padding: 30px 20px;
+      }
   </style>
 </footerWave>
