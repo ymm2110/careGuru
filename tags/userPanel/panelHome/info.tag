@@ -11,7 +11,7 @@
     var that = this;
     this.infoPieceData = [
       {
-        imgurl: './../../../../img/app1.jpg',
+        imgurl: './../../../../img/part 1 info-system.png',
         title: 'Basic Information',
         content: 'Almost all care is provided for by the private sector, though some hospital run by the government. 70% hospitals are non-profit, while the rest are for-profit. Most Pharmaceutical and medical device company are run by private sector. Research pay from both public and private (but more from private) side.'
       },
