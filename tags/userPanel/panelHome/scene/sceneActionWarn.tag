@@ -7,7 +7,10 @@
     confirm() {
       //change the scene and switch the warn and feedback
       var nextSceneId = this.opts.data.optionLinkTo;
-      this.parent.currentScene = this.parent.scenarioData[nextSceneId -1];
+      this.parent.currentSceneId = nextSceneId - 1;
+      console.log(nextSceneId - 1)
+      this.parent.currentScene = this.parent.opts.data.scenarioContent[nextSceneId -1];
+      console.log(this.parent.currentScene);
       this.parent.currentOption = undefined;
       this.parent.feedback = this.opts.data.optionWarn.choosedFeedback;
 

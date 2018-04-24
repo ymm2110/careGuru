@@ -1,13 +1,11 @@
 <scenario>
   <section class="scene-wrap wrap-anime" if={!gameover}>
 
-    <p>{this.opts.data.scenarioIntroduction}</p>
-
     <sceneactionfeedback data={feedback} if={feedback}></sceneactionfeedback>
     <sceneboard data={currentScene}></sceneboard>
     <sceneactionwarn data={currentOption} if={currentOption}></sceneactionwarn>
     <div class="button-wrap">
-      <button onclick={option} id={i.optionLinkTo} each={i in="in" currentscene.options}="currentScene.options}">{i.optionName}</button>
+      <button onclick={option} each={i in currentScene.options} } id={i.optionLinkTo} >{i.optionName}</button>
     </div>
 
     <p>health: {health}</p>
@@ -18,20 +16,27 @@
   </section>
 
   <script>
+
+
+
     this.gameover = false;
     this.health = 50;
     this.money = 100;
     this.feedback = undefined;
 
-
-    this.currentScene = this.scenarioData[0];
+    this.currentSceneId = 0;
+    this.currentScene = this.opts.data.scenarioContent[this.currentSceneId];
+    // console.log(this.currentScene)
+    // console.log(this.currentScene.scenarioContent[0].options);
     this.currentOption = undefined;
 
     option(e) {
       var nextSceneId = e.currentTarget.id;
       this.currentOption = e.item.i;
+      // console.log(e.item.i);
       this.feedback = undefined;
     }
+
   </script>
 
   <style>
