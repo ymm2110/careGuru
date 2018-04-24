@@ -13,38 +13,38 @@
   <script>
     this.surveyData = [
       {
-        question: "xxxxxxxxxxxxxx?",
-        
-        
+        question: "What's your age?",
+
+
       },
       {
-        question: "shfsgadhfgdhfejhbfheavfhs?",
+        question: "Are you U.S. citizens?",
       },
       {
-        question: "23423rdvbhsbhjr3232sdsvds?",
+        question: "Have you used U.S. health insurance before?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "Using any number from 0 to 10, what number would you use to rate your familiarity with the U.S. health care system?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "Using any number from 0 to 10, what number would you use to rate your use of health insurance benefits in the last 12 months?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "Which sources of information did you use during your most recent search for health care/ health insurance?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "What are some of the challenges that you are currently facing when you use U.S. health system?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "What is your favoriate product/feature in CareGuru?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "What is your least like product/feature? Can you explain the reasons?",
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "In your opinion, what change would you make to improve CareGuru site?",
       },
-    ]  
+    ]
 
     this.scrollDistance = 0;
     inputAnswer(e) {
@@ -70,7 +70,7 @@
               .onUpdate(function () {
                 parentDiv.scrollTop = coords.y;
               })
-              .start(); 
+              .start();
         }
       }
     }
@@ -106,7 +106,7 @@
       background: transparent;
       background: linear-gradient(0deg, rgba(245,246,250,1) 0%, rgba(255,255,255,0) 50%, rgba(245,246,250,1) 100%);
     }
-    
+
     .wrap-survey .wrap-survey-inner {
       width: 100%;
       height: 100%;
