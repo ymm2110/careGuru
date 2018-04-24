@@ -72,7 +72,7 @@
       },
       {
         imgurl: './../../../../img/part2-insurance.png',
-        title: 'Coverage for pre-existing conditions',
+        title: 'Pre-existing conditions',
         content: 'All Marketplace plans must cover treatment for pre-existing medical conditions. No insurance plan can reject you, charge you more, or refuse to pay for essential health benefits for any condition you had before your coverage started. Once you’re enrolled, the plan can’t deny you coverage or raise your rates based only on your health. Medicaid and the Children Health Insurance Program (CHIP) also cannot refuse to cover you or charge you more because of your pre-existing condition.'
       },
       {
