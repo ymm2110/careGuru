@@ -16,17 +16,17 @@
         content: 'Almost all care is provided for by the private sector, though some hospital run by the government. 70% hospitals are non-profit, while the rest are for-profit. Most Pharmaceutical and medical device company are run by private sector. Research pay from both public and private (but more from private) side.'
       },
       {
-        imgurl: './../../../../img/app1.jpg',
+        imgurl: './../../../../img/part1-medicine.png',
         title: 'Medicare',
         content: 'National social insurance program run and administered by the federal government 15%. US citizens covered by medicare, most of them are elderly people. It is a Single payer system: all people are covered by one type of insurance. Part A: covers you if you are hospitalized, pretty much free if you are over 65, almost everyone is able to get it. Part B: covers outpatient services, sometimes deferred by people who are still getting insurance from their jobs, has a pretty low deductible, co-insurance is 20%. Part C (a.k.a Medicare Advantage) opportunity for private companies to offer Medicare-like benefits as an alternative to other Medicare benefits. Part D. Contains the prescription drug plans, designed and run by private insurance companies, approved and paid by the Federal Government, individual beneficiaries pick the plan they like.'
       },
       {
-        imgurl: './../../../../img/app1.jpg',
+        imgurl: './../../../../img/part1-medicine.png',
         title: 'Medicaid',
         content: 'State based program (with federally set guidelines), provides medical coverage for people who cannot afford it. The government has a standard to define “who cannot afford it”. Must cover: kids under 6 years of age to 133% FPL and kids 6-18 to 100% FPL, the states children’s health insurance plan, pregnant woman up to 133% FPL, parents to 1996 welfare levels the elderly and those with disabilities who receive Supplemental Security Income. (In most states, adults without kids cannot get medicaid, even those poorest people without kids)'
       },
       {
-        imgurl: './../../../../img/app1.jpg',
+        imgurl: './../../../../img/part 1 info-system.png',
         title: 'Conclusion',
         content: 'Private insurance for most, Medicare and Medicaid for some, and VA and Tricare for few.'
       },//Part 2- Health Insurance Overview
