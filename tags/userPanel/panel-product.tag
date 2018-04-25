@@ -2,14 +2,17 @@
 <panel-product>
   <section class="wrap-product wrap-anime">
     <div class="pre-survey" if={!surveyStart}>
-      Help us make the survey easier
-      <h1>Are You Ready To Do the Survey</h1>
-      <p>We collect the data and help you to remember and rethink about your insurance opportunities and information</p>
-      <button onclick={startSurvey}>Start the survey</button>
+      <h1>Help Us Improve CareGuru!</h1>
+      <p>Hey there! We are always working on make your experience better.</p>
+      <p>This survey focuses on how you utilize the U.S. health care benefits and what you think of our site and
+how you think we could improve it.</p>
+      <p>Your feedback will support our team to improve the services and user experience.</p>
+
+      <button onclick={startSurvey}>Let's do it!</button>
     </div>
     <survey if={surveyStart}></survey>
+    <button onclick={submit}>Submit it! </button>
   </section>
-
 
   <script>
     this.surveyStart = false;
