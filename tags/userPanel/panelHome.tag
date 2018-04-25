@@ -18,22 +18,22 @@
    this.userInfo = this.parent.userInfo;
    this.options = [
      {
-      imgSrc: "../img/app1.jpg",
+      imgSrc: "./img/mainpageMustknowinfo.png",
       title: "Must-Know Information",
       homePage: "must-know-info"
      },
      {
-      imgSrc: "../img/app1.jpg",
+      imgSrc: "./img/main pageScenarios.png",
       title: "Learning Scenarios",
       homePage: "learning-scene"
      },
      {
-      imgSrc: "../img/app1.jpg",
+      imgSrc: "./img/mainpageReminder.png",
       title: "Personalized reminder",
       homePage: "reminder"
      }
    ]
-  
+
     enter(e) {
       this.homePage = e.item.i.homePage;
     }
@@ -51,7 +51,7 @@
       text-align: center;
       padding: 40px 0;
     }
-    
+
     .wrap {
       display: flex;
       justify-content: center;
@@ -81,7 +81,7 @@
     .wrap .home-option:hover {
       box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
-    
+
     .wrap .home-option img{
       width: 50px;
       height: 50px;
