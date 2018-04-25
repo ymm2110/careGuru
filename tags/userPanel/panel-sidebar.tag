@@ -1,7 +1,7 @@
 
 <panel-sidebar>
     <ul>
-      <li><img src="./../img/LOGO2.png" alt="logo"></li>
+      <li><img src="./img/LOGO2.png" alt="logo"></li>
       <li class={activeSideBar: currentPage === 'home'}><a href="#{this.parent.parent.user.uid}/home" onclick={goback} data-message="panelhome"><i class="fa fa-home"></i></a></li>
       <li class={activeSideBar: currentPage === 'product'}><a href="#{this.parent.parent.user.uid}/product" onclick={goback} data-message="panelproduct"><i class="fa fa-tachometer"></i></a></li>
       <li class={activeSideBar: currentPage === 'community'}><i class="fa fa-comment"></i></li>

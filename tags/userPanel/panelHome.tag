@@ -18,17 +18,17 @@
    this.userInfo = this.parent.userInfo;
    this.options = [
      {
-      imgSrc: "../img/mainpageMustknowinfo.png",
+      imgSrc: "./../img/mainpageMustknowinfo.png",
       title: "Must-Know Information",
       homePage: "must-know-info"
      },
      {
-      imgSrc: "../img/main pageScenarios.png",
+      imgSrc: "./../img/main pageScenarios.png",
       title: "Learning Scenarios",
       homePage: "learning-scene"
      },
      {
-      imgSrc: "../img/mainpageReminder.png",
+      imgSrc: "./../img/mainpageReminder.png",
       title: "Personalized reminder",
       homePage: "reminder"
      }
