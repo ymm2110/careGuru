@@ -11,7 +11,7 @@
   </div>
 
   <info if={homePage === "must-know-info"}></info>
-  <scene if={homePage === "learning-scene"}></scene>
+  <scenarioSelection if={homePage === "learning-scenario"}></scenarioSelection>
   <reminder if={homePage === "reminder"}></reminder>
 
   <script>
@@ -25,7 +25,7 @@
      {
       imgSrc: "./img/main pageScenarios.png",
       title: "Learning Scenarios",
-      homePage: "learning-scene"
+      homePage: "learning-scenario"
      },
      {
       imgSrc: "./img/mainpageReminder.png",

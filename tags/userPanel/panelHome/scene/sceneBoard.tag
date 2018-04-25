@@ -5,7 +5,7 @@
     <p>{this.opts.data.question}</p>
   </div>
   <script>
-    
+    // console.log(this.opts.data.scenarioContent)
   </script>
 
   <style>
