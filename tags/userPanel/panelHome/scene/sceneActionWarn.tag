@@ -1,8 +1,12 @@
 
 <sceneActionWarn>
-  <p> {this.opts.data.optionWarn.warnName}</p>
-  <button onclick={confirm}>Continue with This Option</button>
-  <button onclick={cancle}>Choose Again</button>
+  <div class="sceneWarn-wrap wrap-anime">
+    <p> {this.opts.data.optionWarn.warnName}</p>
+    <div class="warn-buttons">
+      <button onclick={confirm} class="confirm">Continue with This Option <i class="fa fa-arrow-up"></i></button>
+      <button onclick={cancle} class="cancle">Choose Again<i class="fa fa-arrow-down"></i></button>
+    </div>
+  </div>
   <script>
     confirm() {
       //change the scene and switch the warn and feedback
@@ -47,8 +51,62 @@
   </script>
 
   <style>
-    :scope p {
-      color: #000;
+    .sceneWarn-wrap {
+      background: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      margin-top: 30px;
     }
+    
+    .sceneWarn-wrap .warn-buttons {
+      width: 100%;
+      display: flex;
+      margin-top: 15px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    .sceneWarn-wrap .warn-buttons > * {
+      flex: 1 1 auto;
+      padding: 10px;
+      max-width: 40%;
+      min-width: 250px;
+      margin-top: 15px;
+      position: relative;
+    }
+    
+    .sceneWarn-wrap .warn-buttons > * > i {
+      position: absolute;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      line-height: 19px;
+      top: 50%;
+      margin-top: -10px;
+      border-radius: 50%;
+    }
+    .sceneWarn-wrap .warn-buttons > .confirm {
+      background: #EE7379;
+      color: #fff;
+      border-radius: 5px;
+    }
+    
+    .sceneWarn-wrap .warn-buttons > .confirm > i {
+      background: #e05359;
+    }
+
+    .sceneWarn-wrap .warn-buttons > .cancle {
+      background: #fff;
+      color: #EE7379;
+      border: 1px solid #EE7379;
+      border-radius: 5px;
+    }
+    
+    .sceneWarn-wrap .warn-buttons > .cancle > i {
+      background: rgb(245, 155, 159);
+      color: #fff;
+      line-height: 21px;
+    }
+
   </style>
 </sceneActionWarn>

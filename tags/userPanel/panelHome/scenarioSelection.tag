@@ -3,12 +3,15 @@
   <section class="wrap-anime wrap">
     <div class="card-shape" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario}>
        { i.scenarioName }
+       <div class="card-shape-preview">
+         <img src="./img/part-1-info-system.png" alt="">
+        </div>
     </div>
   </section>
 
   <!-- <button type="button" name="button" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario} class="sceneSelect wrap-anime"> { i.scenarioName }</button> -->
 
-  <section>
+  <section class="eachScenario">
     <scenario each={i in scenarioData } data= { i } } if={i.scenarioID == this.currentScenario}></scenario>
   </section>
 
@@ -754,11 +757,56 @@
   </script>
 
   <style>
-    .scene-wrap {
+    .eachScenario {
+      height: 90%;
+      overflow-y: scroll;
+      cursor: pointer;
+    }
+
+    .card-shape .card-shape-preview {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+      border: 5px solid #EE7379;
+      margin-top: 30px;
+      position: relative;
+    }
+    
+    .card-shape .card-shape-preview:after {
+      content: "";
+      position: absolute;
+      color: #fff;
+      left: 0;
+      bottom: 0;
+      height: 0%;
+      width: 100%;
+      background: #EE7379;
+      transition: all .4s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card-shape .card-shape-preview:hover:after {
+      content: "View";
+      height: 100%;
+    }
+
+
+
+    .card-shape .card-shape-preview img{
+      width: 100%;
+      height: auto;
+
+    }
+    
+    /* .scene-wrap {
       width: 60%;
       min-width: 270px;
       height: 500px;
-      /* background: #fff; */
+      background: #fff;
       margin: 40px auto;
     }
     .scene-wrap .button-wrap {
@@ -771,6 +819,6 @@
     }
     .scene-wrap .button-wrap > * {
       width: 50%;
-    }
+    } */
   </style>
 </scenarioSelection>
