@@ -5,6 +5,8 @@
       <panel-head></panel-head>
       <panelHome if={ subpage === `${this.uid}/home` }></panelHome>
       <panel-product if={ subpage === `${this.uid}/product` }></panel-product>
+      <panelSaved if={ subpage === `${this.uid}/saved` && viewAll }></panelSaved>
+      <panelSaved-view if={ eachSaved } data = { eachSaved }></panelSaved-view>
     </main>
     <panel-user-card if={usercard}></panel-user-card>
   </section>
@@ -15,6 +17,8 @@
     this.uid = this.parent.user.uid; //obtain the user id and transform it into the unique subpage URL
     this.userInfo;
     this.currentPage; //obtain the current page name
+    this.viewAll = true;
+    this.eachSaved = false;
     
     var subRoute = route.create();
     subRoute(`${this.uid}/*`, function(page) {
@@ -37,7 +41,6 @@
       careGuruRef.orderByKey().equalTo(that.uid).on('value', function(e) {
         var data = Object.values(e.val())[0];       
         that.userInfo = data;
-        // that.update();
         that.tags.panelhome.userInfo = data; // pass the data to the child component for later use
         that.tags.panelhome.update();
       })

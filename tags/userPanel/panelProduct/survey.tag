@@ -16,43 +16,58 @@
 
 
   <script>
+    var that = this;
+    this.uid = this.parent.parent.uid;
     this.surveyData = [
       {
         question: "What's your age?",
-
+        data: "age"
 
       },
       {
         question: "Are you U.S. citizens?",
+        data: "citizens"
       },
       {
         question: "Have you used U.S. health insurance before?",
+        data: "useHealthBefore"
       },
       {
         question: "Using any number from 0 to 10, what number would you use to rate your familiarity with the U.S. health care system?",
+        data: "farmiliarityRate"
       },
       {
         question: "Using any number from 0 to 10, what number would you use to rate your use of health insurance benefits in the last 12 months?",
+        data: "usageRate"
       },
       {
         question: "Which sources of information did you use during your most recent search for health care/ health insurance?",
+        data: "infoSource"
       },
       {
         question: "What are some of the challenges that you are currently facing when you use U.S. health system?",
+        data: "challenges"
       },
       {
         question: "What is your favoriate product/feature in CareGuru?",
+        data: "favorite"
       },
       {
         question: "What is your least like product/feature? Can you explain the reasons?",
+        data: "leastLike"
       },
       {
         question: "In your opinion, what change would you make to improve CareGuru site?",
+        data: "change"
       },
     ]
 
     this.scrollDistance = 0;
+    this.surveyAnswerData = {};
     inputAnswer(e) {
+
+      
+
       if(e.which == 13) {
         var answer = e.target.value;
         //move focus to the next input
@@ -63,6 +78,12 @@
           var selector = "[data-num='" + id + "']"; 
           var el = document.querySelector(selector)
           el.classList.add('finish');
+
+          //obtain the data intended
+          var data = e.item.i.data;
+          this.surveyAnswerData[data] = answer;
+
+
         }else{
           console.log('there is nothing')
 
@@ -86,6 +107,8 @@
                 parentDiv.scrollTop = coords.y;
               })
               .start();
+        }else {
+          firebase.database().ref("/careGuru/" + this.uid + "/surveyData").set(that.surveyAnswerData);
         }
       }
     }

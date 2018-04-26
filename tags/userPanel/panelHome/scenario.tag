@@ -7,9 +7,9 @@
     <div class="scene-main"><sceneactionfeedback data={feedback} if={feedback}></sceneactionfeedback>
       <sceneboard data={currentScene}></sceneboard>
       <sceneactionwarn data={currentOption} if={currentOption}></sceneactionwarn>
-      <ul class="button-wrap">
+      <ul class="bar-shape">
         <li onclick={option} each={i in currentScene.options} } id={i.optionLinkTo} >{i.optionName}</li>
-      </div>
+      </ul>
     </div>
   </section>
   <section class="scene-gameover" if={gameover}>
@@ -27,14 +27,11 @@
 
     this.currentSceneId = 0;
     this.currentScene = this.opts.data.scenarioContent[this.currentSceneId];
-    // console.log(this.currentScene)
-    // console.log(this.currentScene.scenarioContent[0].options);
     this.currentOption = undefined;
 
     option(e) {
       var nextSceneId = e.currentTarget.id;
       this.currentOption = e.item.i;
-      // console.log(e.item.i);
       this.feedback = undefined;
     }
 
@@ -50,7 +47,7 @@
       flex-wrap: wrap;
       
     }
-    .scene-wrap .button-wrap {
+    .scene-wrap .bar-shape {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -59,7 +56,7 @@
       justify-content: space-around;
       flex-wrap: wrap;
     }
-    .scene-wrap .button-wrap > * {
+    .scene-wrap .bar-shape > * {
       margin: 5px 0;
       background: #fff;
       border-radius: 5px;
@@ -71,7 +68,7 @@
       overflow: hidden;
     }
     
-    .scene-wrap .button-wrap > *::after {
+    .scene-wrap .bar-shape > *::after {
       content: "";
       position: absolute;
       left: 0;
@@ -84,12 +81,12 @@
       transform: translateX(-2px);
     }
 
-    .scene-wrap .button-wrap > *:hover {
+    .scene-wrap .bar-shape > *:hover {
       box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.1);
       transform: translateY(1px);
     }
     
-    .scene-wrap .button-wrap > *:hover:after {
+    .scene-wrap .bar-shape > *:hover:after {
       transform: translateX(0px);
     }
 
