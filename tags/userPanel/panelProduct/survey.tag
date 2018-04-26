@@ -1,5 +1,10 @@
 
 <survey>
+
+  <ul class="progress">
+    <li each={ i, index in surveyData} data-num = {index}>{index + 1}</li>
+  </ul>
+
   <section class="wrap-survey wrap-anime">
     <div class="wrap-survey-inner">
       <div class="question-wrap" each = {i, index in surveyData} id = {"index"+ index}>
@@ -53,6 +58,16 @@
         //move focus to the next input
         var currentIndex = e.target.id.replace(/input/g, '') - 0;
         var brotherId = currentIndex + 1;
+        if(answer) {       
+          var id = e.item.index + '';
+          var selector = "[data-num='" + id + "']"; 
+          var el = document.querySelector(selector)
+          el.classList.add('finish');
+        }else{
+          console.log('there is nothing')
+
+        }
+
 
         //judge the if this is last question
         if(brotherId < this.surveyData.length) {
@@ -86,6 +101,68 @@
   </script>
 
   <style>
+    .progress {
+      display: flex;
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 50px;
+      justify-content: space-around;
+    }
+    .progress > li {
+      position: relative;
+      color: #DFE2E9;
+      line-height: 20px;
+      border: 1px solid #DFE2E9;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transition: all 1s;
+    }
+    .progress > li:after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 4px;
+      width: 0;
+      background-color: #DFE2E9;
+      transition: all 1s ease-in-out;
+    }
+    .progress > li:before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 4px;
+      width: 0;
+      background-color: #DFE2E9;
+      transition: all 1s ease-in-out;
+    }
+
+    .progress > li.finish {
+      border-color: #EE7379;
+      background: #EE7379;
+      color: #fff;
+    }
+    .progress > li.finish:after {
+      width: 18px;
+      background-color: #EE7379;
+    }
+    .progress > li.finish:before {
+      width: 18px;
+      background-color: #EE7379;
+    }
+
+
+
+
+
+
+
     .wrap-survey {
       width: 400px;
       height: 400px;
