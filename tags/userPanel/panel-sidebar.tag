@@ -18,6 +18,8 @@
       if(this.parent.tags.hasOwnProperty(e.target.dataset.message)){
         this.parent.tags.panelhome.homePage = false; 
         this.parent.tags.panelhome.update(); 
+      }else {
+        console.log('else: parent tag doesnt have ')
       }
     }
   </script>
