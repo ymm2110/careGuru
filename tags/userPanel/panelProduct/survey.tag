@@ -117,18 +117,20 @@
       height: 20px;
       border-radius: 50%;
       transition: all 1s;
+      transition-delay: 1s;
     }
     .progress > li:after {
       content: "";
       position: absolute;
-      right: -20px;
+      width: 0;
+      left: 20px;
       top: 0;
       bottom: 0;
       margin: auto 0;
       height: 4px;
-      width: 0;
       background-color: #DFE2E9;
       transition: all 1s ease-in-out;
+      transition-delay: 2s;
     }
     .progress > li:before {
       content: "";
