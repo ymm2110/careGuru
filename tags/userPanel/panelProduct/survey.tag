@@ -123,7 +123,7 @@
       content: "";
       position: absolute;
       width: 0;
-      left: 20px;
+      left: 21px;
       top: 0;
       bottom: 0;
       margin: auto 0;
@@ -135,7 +135,7 @@
     .progress > li:before {
       content: "";
       position: absolute;
-      left: -20px;
+      left: -19px;
       top: 0;
       bottom: 0;
       margin: auto 0;
