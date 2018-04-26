@@ -6,6 +6,7 @@
       <div class="home-option card-shape" each = {i in options} onclick={enter}>
         <img src={i.imgSrc} alt={i.title} >
         <h3>{i.title}</h3>
+        <p>{i.intro}</p>
       </div>
     </section>
   </div>
@@ -20,17 +21,20 @@
      {
       imgSrc: "./img/mainpageMustknowinfo.png",
       title: "Must-Know Information",
-      homePage: "must-know-info"
+      homePage: "must-know-info",
+      intro: "Here are basic U.S. health care jargons and health insurance policies you need to know in order to understand what people are talking."
      },
      {
       imgSrc: "./img/main pageScenarios.png",
       title: "Learning Scenarios",
-      homePage: "learning-scenario"
+      homePage: "learning-scenario",
+      intro: "You will experiencing 3 different situations. We will provide explanations/consequences regarding your choice, but the final decision is up to you."
      },
      {
       imgSrc: "./img/mainpageReminder.png",
-      title: "Personalized reminder",
-      homePage: "reminder"
+      title: "Personalized Reminder",
+      homePage: "reminder",
+      intro: "Create your personal profile to receive insurance-related reminders (e.g., Exams, Vaccines, Claims...)."
      }
    ]
 
@@ -52,6 +56,13 @@
       padding: 40px 0;
     }
 
+    p {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      font-weight: lighter;
+    }
+
     .wrap {
       display: flex;
       justify-content: center;
@@ -60,21 +71,23 @@
       overflow: auto;
       height: calc(100% - 59px);
       animation: slideIn ease-in-out 1s forwards;
+      margin-top: 130px;
     }
 
     .wrap .home-option {
-      
+      border-radius: 5%;
+      border-style: hidden;
+      border-color: #BCAEB6;
     }
-    .wrap .home-option h3{
-      font-weight: 100;
 
+    .wrap .home-option h3{
+      font-weight: 400;
     }
 
     .wrap .home-option img{
       width: 50px;
       height: 50px;
       border-radius: 50%;
-
     }
   </style>
 </panelHome>
