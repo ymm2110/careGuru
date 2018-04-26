@@ -1,6 +1,12 @@
 <scenarioSelection>
 
-  <button type="button" name="button" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario}> { i.scenarioName }</button>
+  <section class="wrap-anime wrap">
+    <div class="card-shape" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario}>
+       { i.scenarioName }
+    </div>
+  </section>
+
+  <!-- <button type="button" name="button" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario} class="sceneSelect wrap-anime"> { i.scenarioName }</button> -->
 
   <section>
     <scenario each={i in scenarioData } data= { i } } if={i.scenarioID == this.currentScenario}></scenario>

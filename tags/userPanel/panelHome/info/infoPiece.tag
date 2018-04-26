@@ -45,7 +45,6 @@
       width: 340px;
       height: 90px;
       background: #fff;
-      box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.2);
       overflow: hidden;
       border-radius: 4px;
       display: flex;
@@ -56,6 +55,9 @@
       max-height: 100px;
       transition: all 0.5s ease-in-out;
       cursor: pointer;
+    }
+    .piece-wrap:hover {
+       box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.2);
     }
     .piece-wrap .fa-star {
       position: absolute;

@@ -3,7 +3,7 @@
   <div class="home-wrap" if={!homePage}>
     <!-- <h1>Hi this is home</h1> -->
     <section class="wrap tobeanimate">
-      <div class="home-option" each = {i in options} onclick={enter}>
+      <div class="home-option card-shape" each = {i in options} onclick={enter}>
         <img src={i.imgSrc} alt={i.title} >
         <h3>{i.title}</h3>
       </div>
@@ -63,23 +63,11 @@
     }
 
     .wrap .home-option {
-      width: 250px;
-      height: 280px;
-      background: #fff;
-      margin: 20px 50px;
-      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
-      border-radius: 6px;
-      box-sizing: border-box;
-      padding: 20px;
-      transition: box-shadow .3s ease-in-out;
+      
     }
     .wrap .home-option h3{
       font-weight: 100;
 
-    }
-
-    .wrap .home-option:hover {
-      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
     .wrap .home-option img{
