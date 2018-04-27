@@ -13,6 +13,7 @@
       </div>
     </div>
   </section>
+  <button class="submitbutton" onclick={submit}>Submit it! </button>
 
 
   <script>
@@ -234,6 +235,21 @@
       margin-bottom: 200px;
      }
 
+
+     .submitbutton {
+      font: "proxima nova";
+      color: #F07277;
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 50px;
+      border: solid 2px #F07277;
+      padding: 3px 10px;
+      margin-top: 10px;
+      background: transparent;
+      -webkit-transition-duration: 400ms;
+      transition-duration: 400ms;
+    }
 
   </style>
 </survey>

@@ -761,16 +761,16 @@
     .eachScenario {
       height: 90%;
       overflow-y: scroll;
-      cursor: pointer;
     }
 
     .card-shape .card-shape-preview {
+      cursor: pointer;
       width: 150px;
       height: 150px;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto;
-      border: 5px solid #6FCEE9;
+      border: 5px solid #EE7379;
       margin-top: 30px;
       position: relative;
     }
@@ -783,7 +783,7 @@
       bottom: 0;
       height: 0%;
       width: 100%;
-      background: #6FCEE9;
+      background: #EE7379;
       transition: all .4s ease-in-out;
       display: flex;
       justify-content: center;

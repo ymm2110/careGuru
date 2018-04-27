@@ -8,10 +8,9 @@
 how you think we could improve it.</p>
       <p>Your feedback will support our team to improve the services and user experience.</p>
 
-      <a class="gap startbutton" onclick={startSurvey}>Let's do it!</a>
+      <a class="startbutton" onclick={startSurvey}>Let's do it!</a>
     </div>
     <survey if={surveyStart}></survey>
-    <a class="gap submitbutton" onclick={submit}>Submit it! </a>
   </section>
 
   <script>
@@ -34,40 +33,30 @@ how you think we could improve it.</p>
     }
 
     .startbutton {
-      font: "proxima nova";
-      color: #6FCEE9;
+      color: #EE7379;
       font-weight: 100;
       font-size: 20px;
       text-align: center;
-      border-radius: 50px;
-      border: solid 2px #6FCEE9;
+      border-radius: 5px;
+      border: solid 2px #EE7379;
       padding: 3px 10px;
-      -webkit-transition-duration: 400ms;
+      margin: 30px auto;
+      width: 100px;
       transition-duration: 400ms;
+      cursor: pointer;
+      display: block;
     }
 
     .startbutton:hover {
-      background-color: #6FCEE9;
+      background-color: #EE7379;
       color: #fff;
     }
-
-    .submitbutton {
-      font: "proxima nova";
-      color: #F07277;
-      font-weight: 100;
-      font-size: 20px;
-      text-align: center;
-      border-radius: 50px;
-      border: solid 2px #F07277;
-      padding: 3px 10px;
-      -webkit-transition-duration: 400ms;
-      transition-duration: 400ms;
-    }
+    
 
     .submitbutton:hover {
       background-color: #F07277;
       color: #fff;
-    }
+    } 
 
   </style>
 </panel-product>

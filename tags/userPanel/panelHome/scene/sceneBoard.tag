@@ -15,5 +15,8 @@
       line-height: 2.3em;
       border-radius: 5px;
     }
+    .sceneBoard-wrap p {
+      text-align: left;
+    }
   </style>
 </sceneBoard>

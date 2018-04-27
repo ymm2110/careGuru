@@ -71,13 +71,10 @@
       overflow: auto;
       height: calc(100% - 59px);
       animation: slideIn ease-in-out 1s forwards;
-      margin-top: 130px;
     }
 
     .wrap .home-option {
-      border-radius: 5%;
-      border-style: hidden;
-      border-color: #BCAEB6;
+      border-radius: 5px;
     }
 
     .wrap .home-option h3{
