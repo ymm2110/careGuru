@@ -66,16 +66,16 @@
     this.surveyAnswerData = {};
     inputAnswer(e) {
 
-      
+
 
       if(e.which == 13) {
         var answer = e.target.value;
         //move focus to the next input
         var currentIndex = e.target.id.replace(/input/g, '') - 0;
         var brotherId = currentIndex + 1;
-        if(answer) {       
+        if(answer) {
           var id = e.item.index + '';
-          var selector = "[data-num='" + id + "']"; 
+          var selector = "[data-num='" + id + "']";
           var el = document.querySelector(selector)
           el.classList.add('finish');
 
@@ -233,5 +233,7 @@
      .question-wrap:last-child {
       margin-bottom: 200px;
      }
+
+
   </style>
 </survey>

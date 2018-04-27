@@ -8,10 +8,10 @@
 how you think we could improve it.</p>
       <p>Your feedback will support our team to improve the services and user experience.</p>
 
-      <button onclick={startSurvey}>Let's do it!</button>
+      <a class="gap startbutton" onclick={startSurvey}>Let's do it!</a>
     </div>
     <survey if={surveyStart}></survey>
-    <button onclick={submit}>Submit it! </button>
+    <a class="gap submitbutton" onclick={submit}>Submit it! </a>
   </section>
 
   <script>
@@ -22,8 +22,52 @@ how you think we could improve it.</p>
   </script>
 
   <style>
+
+    h1 {
+      padding: 50px 80px;
+      font-size: 30px;
+    }
+
     .wrap-product {
+      font: "proxima nova";
       text-align: center;
     }
+
+    .startbutton {
+      font: "proxima nova";
+      color: #6FCEE9;
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 50px;
+      border: solid 2px #6FCEE9;
+      padding: 3px 10px;
+      -webkit-transition-duration: 400ms;
+      transition-duration: 400ms;
+    }
+
+    .startbutton:hover {
+      background-color: #6FCEE9;
+      color: #fff;
+    }
+
+    .submitbutton {
+      font: "proxima nova";
+      color: #F07277;
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 50px;
+      border: solid 2px #F07277;
+      padding: 3px 10px;
+      -webkit-transition-duration: 400ms;
+      transition-duration: 400ms;
+    }
+
+    .submitbutton:hover {
+      background-color: #F07277;
+      color: #fff;
+    }
+
   </style>
 </panel-product>

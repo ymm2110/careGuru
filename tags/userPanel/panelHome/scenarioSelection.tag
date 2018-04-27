@@ -4,9 +4,10 @@
     <div class="card-shape" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario}>
        { i.scenarioName }
        <div class="card-shape-preview">
-         <img src="./img/part-1-info-system.png" alt="">
+         <img src="./img/Scenario1.png" alt="">
         </div>
     </div>
+
   </section>
 
   <!-- <button type="button" name="button" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario} class="sceneSelect wrap-anime"> { i.scenarioName }</button> -->
@@ -32,7 +33,7 @@
           {
               question: "George noticed Greg’s situation and tried to help. Greg told George his situation and says he’s in stable condition. As George, what should you do?",
             descrip: "Before Christmas, Greg went to snowboarding in Vail, Colorado with a friend. It’s his first time on the snow so he’s excited. His friend, George, is an experienced snowboarder. After a few practices on the learning slope, Greg became very confident on himself and decided to go to a blue trail with George. The first run went well and Greg started to loose his carefulness. On his second run, Greg failed to manage his speed at a shape turn, and hit a tree. He went unconscious. Fortunately, Greg’s helmet got his consciousness back quickly, but he felt difficult to breath well because of the hit in his chest. He’s left shin also hurts badly and couldn’t stand up. ",
-            imgurl: "sadsadada",
+            imgurl: "./img/sad3.png",
             sceneId: 1,
             options:
             {
@@ -101,7 +102,7 @@
           {
             question: "As Greg, what do you want to do?",
             descrip: "In the Ski Patrol office, patrollers examined Greg briefly. Greg seemed very conscious, and could response to all questions normally. His breathing difficulties went away. His blood pressure and other health indicating measurements were within normal range. However,  his left shin kept giving him pain. The on-site doctor said she couldn’t tell if Greg’s bones are broken because of no x-ray. She gave Greg ice packs, wrapped his shin with supports, and suggested Greg to go to another doctor. ",
-            imgurl: "sadsadada",
+            imgurl: "./img/sad2.png",
             sceneId: 2,
             options:
             {
@@ -185,7 +186,7 @@
           {
             question: "As Greg, what do you want to do?",
             descrip: "Greg realized he must find medical help for his injury.",
-            imgurl: "sadsadada",
+            imgurl: "./img/dizzy2.png",
             sceneId: 3,
             options:
             {
@@ -239,7 +240,7 @@
           {
             question: "As Greg, how to fill out information about your insurance?",
             descrip: "After being treated, a nurse came in and gave Greg a lot of paper works to fill. The form asked for personal information as well as insurance information, such as your insurance ID number. But Greg didn’t have a copy of his insurance. Ahh so much paperwork! ",
-            imgurl: "sadsadada",
+            imgurl: "./img/sad1.png",
             sceneId: 4,
             options:
             {
@@ -308,7 +309,7 @@
           {
             question: "As Greg, what can you do?",
             descrip: "Greg went back to Boston after his ski trip. Weeks later, Greg received bills that contained visit fees, laboratory fees, and doctor fees. Greg found the amount was too high to afford. He wanted to see if he could still use his insurance to cover some of the expense.",
-            imgurl: "sadsadada",
+            imgurl: "./img/dizzy1.png",
             sceneId: 5,
             options:
             {
@@ -362,7 +363,7 @@
           {
             question: "As Greg, which care provider you should go to?",
             descrip: "After coming back to Boston, Greg realized he need to visit a doctor to check how his bone is healing, and got instructions about what to do next.",
-            imgurl: "sadsadada",
+            imgurl: "./img/happy1.png",
             sceneId: 6,
             options:
             {
@@ -769,11 +770,11 @@
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto;
-      border: 5px solid #EE7379;
+      border: 5px solid #6FCEE9;
       margin-top: 30px;
       position: relative;
     }
-    
+
     .card-shape .card-shape-preview:after {
       content: "";
       position: absolute;
@@ -782,13 +783,13 @@
       bottom: 0;
       height: 0%;
       width: 100%;
-      background: #EE7379;
+      background: #6FCEE9;
       transition: all .4s ease-in-out;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    
+
     .card-shape .card-shape-preview:hover:after {
       content: "View";
       height: 100%;
@@ -801,7 +802,7 @@
       height: auto;
 
     }
-    
+
     /* .scene-wrap {
       width: 60%;
       min-width: 270px;
