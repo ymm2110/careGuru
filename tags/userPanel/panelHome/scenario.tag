@@ -1,6 +1,7 @@
 <scenario>
   <section class="scene-wrap wrap-anime" if={!gameover}>
     <div class="status">
+      <p>{scenarioIntroduction}</p>
       <p>health: {health}</p>
       <p>money: {money}</p>
     </div>
@@ -21,6 +22,7 @@
 
 
     this.gameover = false;
+    this.scenarioIntroduction = this.opts.data.scenarioIntroduction;
     this.health = 50;
     this.money = 100;
     this.feedback = undefined;
@@ -45,7 +47,7 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      
+
     }
     .scene-wrap .bar-shape {
       width: 100%;
@@ -67,7 +69,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .scene-wrap .bar-shape > *::after {
       content: "";
       position: absolute;
@@ -85,7 +87,7 @@
       box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.1);
       transform: translateY(1px);
     }
-    
+
     .scene-wrap .bar-shape > *:hover:after {
       transform: translateX(0px);
     }
@@ -99,6 +101,7 @@
     .scene-wrap .status {
       background: #fff;
       min-width: 200px;
+      max-width: 30%;
       height: 270px;
       border-radius: 5px;
       box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
