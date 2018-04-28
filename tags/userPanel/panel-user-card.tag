@@ -7,10 +7,12 @@
       <p>{user.displayName}</p>
     </header>
     <main class="user-parameter">
-      <div class="parameter star">
-        <i class="fa fa-star"></i>
-        { Object.values(this.userInfo.starredArticle).length }
-      </div>
+      <a href="#{this.parent.parent.user.uid}/saved">
+        <div class="parameter star">
+          <i class="fa fa-star"></i>
+          { Object.values(this.userInfo.starredArticle).length }
+        </div>
+      </a>
       <div class="parameter">
         <i class="fa fa-star"></i>
         123
@@ -29,15 +31,6 @@
     that = this;
     this.user = this.parent.user;
     this.userInfo = this.parent.userInfo
-    console.log(Object.values(this.userInfo.starredArticle).length)
-
-
-
-
-
-
-
-
 
     close() {
       that.refs.wrap.classList.add('slide-left-back');

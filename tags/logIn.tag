@@ -43,13 +43,11 @@
         var existedUser = undefined;
         var existedUserId = undefined;
 
-        careGuruRef.on('value', (snapshot)=>{
-          // console.log();
+        careGuruRef.once('value', (snapshot)=>{
           userIds = Object.keys(snapshot.val());
           userIds.forEach((i)=>{
             if(user.uid === i) {
               ifNewUser = false;
-              console.log('this is a existed user');
               existedUserId = i;
               return
             }
