@@ -1,11 +1,11 @@
 
 <survey>
 
-
   <ul class="progress">
     <li each={ i, index in surveyData} data-num = {index}>{index + 1}</li>
   </ul>
   <p class = "tipText">Press "Enter" key to record your answers</p>
+
 
   <section class="wrap-survey wrap-anime">
     <div class="wrap-survey-inner">
@@ -18,8 +18,9 @@
   <!-- <button class="submitbutton" onclick={submit} >Submit it! </button> -->
 
 
-
   <script>
+    var that = this;
+    this.uid = this.parent.parent.uid;
     this.surveyData = [
       {
         question: "What's your age? Please type in a number.",
@@ -44,14 +45,33 @@
       }
     ]
 
-
     this.scrollDistance = 0;
+    this.surveyAnswerData = {};
     inputAnswer(e) {
+
+
+
       if(e.which == 13) {
         var answer = e.target.value;
         //move focus to the next input
         var currentIndex = e.target.id.replace(/input/g, '') - 0;
         var brotherId = currentIndex + 1;
+        if(answer) {
+          var id = e.item.index + '';
+          var selector = "[data-num='" + id + "']";
+          var el = document.querySelector(selector)
+          el.classList.add('finish');
+
+          //obtain the data intended
+          var data = e.item.i.data;
+          this.surveyAnswerData[data] = answer;
+
+
+        }else{
+          console.log('there is nothing')
+
+        }
+
 
         //judge the if this is last question
         if(brotherId < this.surveyData.length) {
@@ -73,7 +93,6 @@
         }else {
           firebase.database().ref("/careGuru/" + this.uid + "/surveyData").set(that.surveyAnswerData);
           alert("Thank you for completing the questionnaire");
-
         }
       }
     }
@@ -157,6 +176,12 @@
       background-color: #EE7379;
     }
 
+
+
+
+
+
+
     .wrap-survey {
       width: 400px;
       height: 400px;
@@ -177,7 +202,7 @@
       background: transparent;
       background: linear-gradient(0deg, rgba(245,246,250,1) 0%, rgba(255,255,255,0) 50%, rgba(245,246,250,1) 100%);
     }
-    
+
     .wrap-survey .wrap-survey-inner {
       width: 100%;
       height: 100%;
@@ -202,5 +227,22 @@
      .question-wrap:last-child {
       margin-bottom: 200px;
      }
+
+
+     .submitbutton {
+      font: "proxima nova";
+      color: #F07277;
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 50px;
+      border: solid 2px #F07277;
+      padding: 3px 10px;
+      margin-top: 10px;
+      background: transparent;
+      -webkit-transition-duration: 400ms;
+      transition-duration: 400ms;
+    }
+
   </style>
 </survey>
