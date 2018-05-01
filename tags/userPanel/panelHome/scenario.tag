@@ -1,6 +1,7 @@
 <scenario>
   <section class="scene-wrap wrap-anime" if={!gameover}>
     <div class="status">
+      <img src={ imgs[imgID] } alt="" class="character">
       <p>{scenarioIntroduction}</p>
       <p>health: {health}</p>
       <p>money: {money}</p>
@@ -18,7 +19,13 @@
   </section>
 
   <script>
-
+  var that = this;
+  this.imgID = 0;
+    this.imgs = [
+      './img/dizzy1.png',
+      './img/dizzy2.png',
+      './img/dizzy3.png',
+    ]
 
 
     this.gameover = false;
@@ -36,6 +43,36 @@
       this.currentOption = e.item.i;
       this.feedback = undefined;
     }
+    this.on('update', function(){
+      // if(that.health === 50) {
+      //     that.imgID = 0;
+      // }else if(that.health <= 75 && that.health > 50) {
+      //   that.imgID = 1;
+      // }
+      var x = that.health;
+      switch (true) {
+  case (x === 50):
+    that.imgID = 0;
+    break;
+  case (x<= 75 && x > 50):
+    that.imgID = 1;
+    break;
+  case (x<= 100 && x > 70):
+    that.imgID = 2;
+    break;
+  default:
+    that.imgID = 0;
+}
+
+
+    })
+
+    // this.on('mount', function() {
+    //   if(that.health > 20) {
+    //       that.imgID = 2;
+    //   }
+    //   that.update();
+    // })
 
   </script>
 
@@ -110,5 +147,12 @@
       justify-content: center;
       align-items: center;
     }
+
+      .scene-wrap .status .character{
+        width: 70px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
   </style>
 </scenario>
