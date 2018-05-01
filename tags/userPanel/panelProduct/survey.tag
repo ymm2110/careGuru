@@ -1,5 +1,12 @@
 
 <survey>
+
+
+  <ul class="progress">
+    <li each={ i, index in surveyData} data-num = {index}>{index + 1}</li>
+  </ul>
+  <p class = "tipText">Press "Enter" key to record your answers</p>
+
   <section class="wrap-survey wrap-anime">
     <div class="wrap-survey-inner">
       <div class="question-wrap" each = {i, index in surveyData} id = {"index"+ index}>
@@ -8,43 +15,35 @@
       </div>
     </div>
   </section>
+  <!-- <button class="submitbutton" onclick={submit} >Submit it! </button> -->
+
 
 
   <script>
     this.surveyData = [
       {
-        question: "xxxxxxxxxxxxxx?",
-        
-        
+        question: "What's your age? Please type in a number.",
+        data: "age"
+
       },
       {
-        question: "shfsgadhfgdhfejhbfheavfhs?",
+        question: "What's your physical gender? Please type male or female.",
+        data: "gender"
       },
       {
-        question: "23423rdvbhsbhjr3232sdsvds?",
+        question: "Do you have school insurance? Please type yes or no. ",
+        data: "schoolInsurance"
       },
       {
-        question: "273hsxbhbfhef23?",
+        question: "Which school are you attending?",
+        data: "schoolAttending"
       },
       {
-        question: "273hsxbhbfhef23?",
-      },
-      {
-        question: "273hsxbhbfhef23?",
-      },
-      {
-        question: "273hsxbhbfhef23?",
-      },
-      {
-        question: "273hsxbhbfhef23?",
-      },
-      {
-        question: "273hsxbhbfhef23?",
-      },
-      {
-        question: "273hsxbhbfhef23?",
-      },
-    ]  
+        question: "When do your current insurance expire? Please type in the date in yyyy-mm-dd format.",
+        data: "insuranceExprieDate"
+      }
+    ]
+
 
     this.scrollDistance = 0;
     inputAnswer(e) {
@@ -70,7 +69,11 @@
               .onUpdate(function () {
                 parentDiv.scrollTop = coords.y;
               })
-              .start(); 
+              .start();
+        }else {
+          firebase.database().ref("/careGuru/" + this.uid + "/surveyData").set(that.surveyAnswerData);
+          alert("Thank you for completing the questionnaire");
+
         }
       }
     }
@@ -83,9 +86,77 @@
       }
       requestAnimationFrame(animate);
     })
+
   </script>
 
   <style>
+    .tipText {
+      color: #EE7379;
+      display: flex;
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 30px;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .progress {
+      display: flex;
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 50px;
+      justify-content: space-around;
+    }
+    .progress > li {
+      position: relative;
+      color: #DFE2E9;
+      line-height: 20px;
+      border: 1px solid #DFE2E9;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transition: all 1s;
+      transition-delay: 1s;
+    }
+    .progress > li:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 21px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 4px;
+      background-color: #DFE2E9;
+      transition: all 1s ease-in-out;
+      transition-delay: 2s;
+    }
+    .progress > li:before {
+      content: "";
+      position: absolute;
+      left: -19px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 4px;
+      width: 0;
+      background-color: #DFE2E9;
+      transition: all 1s ease-in-out;
+    }
+
+    .progress > li.finish {
+      border-color: #EE7379;
+      background: #EE7379;
+      color: #fff;
+    }
+    .progress > li.finish:after {
+      width: 18px;
+      background-color: #EE7379;
+    }
+    .progress > li.finish:before {
+      width: 18px;
+      background-color: #EE7379;
+    }
+
     .wrap-survey {
       width: 400px;
       height: 400px;
