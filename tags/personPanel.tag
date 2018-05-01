@@ -19,7 +19,7 @@
     this.currentPage; //obtain the current page name
     this.viewAll = true;
     this.eachSaved = false;
-    
+
     var subRoute = route.create();
     subRoute(`${this.uid}/*`, function(page) {
       that.subpage = that.uid + "/" + page;
@@ -34,12 +34,12 @@
 
     this.on('mount', function(){
       route.exec();
-      
 
-//---------------------------very Critical Step-------------------------------------//      
+
+//---------------------------very Critical Step-------------------------------------//
      //do query from database to get the right user info
       careGuruRef.orderByKey().equalTo(that.uid).on('value', function(e) {
-        var data = Object.values(e.val())[0];       
+        var data = Object.values(e.val())[0];
         that.userInfo = data;
         that.tags.panelhome.userInfo = data; // pass the data to the child component for later use
         that.tags.panelhome.update();
@@ -64,7 +64,7 @@
       flex: 1 1;
       background: #ccc;
     }
-    
+
     .wrap .sidebar{
       max-width: 60px;
       background-color: #fff;

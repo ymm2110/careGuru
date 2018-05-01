@@ -4,6 +4,8 @@
   <ul class="progress">
     <li each={ i, index in surveyData} data-num = {index}>{index + 1}</li>
   </ul>
+  <p class = "tipText">Press "Enter" key to record your answers</p>
+
 
   <section class="wrap-survey wrap-anime">
     <div class="wrap-survey-inner">
@@ -13,7 +15,7 @@
       </div>
     </div>
   </section>
-  <button class="submitbutton" onclick={submit}>Submit it! </button>
+  <!-- <button class="submitbutton" onclick={submit} >Submit it! </button> -->
 
 
   <script>
@@ -21,46 +23,26 @@
     this.uid = this.parent.parent.uid;
     this.surveyData = [
       {
-        question: "What's your age?",
+        question: "What's your age? Please type in a number.",
         data: "age"
 
       },
       {
-        question: "Are you U.S. citizens?",
-        data: "citizens"
+        question: "What's your physical gender? Please type male or female.",
+        data: "gender"
       },
       {
-        question: "Have you used U.S. health insurance before?",
-        data: "useHealthBefore"
+        question: "Do you have school insurance? Please type yes or no. ",
+        data: "schoolInsurance"
       },
       {
-        question: "Using any number from 0 to 10, what number would you use to rate your familiarity with the U.S. health care system?",
-        data: "farmiliarityRate"
+        question: "Which school are you attending?",
+        data: "schoolAttending"
       },
       {
-        question: "Using any number from 0 to 10, what number would you use to rate your use of health insurance benefits in the last 12 months?",
-        data: "usageRate"
-      },
-      {
-        question: "Which sources of information did you use during your most recent search for health care/ health insurance?",
-        data: "infoSource"
-      },
-      {
-        question: "What are some of the challenges that you are currently facing when you use U.S. health system?",
-        data: "challenges"
-      },
-      {
-        question: "What is your favoriate product/feature in CareGuru?",
-        data: "favorite"
-      },
-      {
-        question: "What is your least like product/feature? Can you explain the reasons?",
-        data: "leastLike"
-      },
-      {
-        question: "In your opinion, what change would you make to improve CareGuru site?",
-        data: "change"
-      },
+        question: "When do your current insurance expire? Please type in the date in yyyy-mm-dd format.",
+        data: "insuranceExprieDate"
+      }
     ]
 
     this.scrollDistance = 0;
@@ -110,6 +92,7 @@
               .start();
         }else {
           firebase.database().ref("/careGuru/" + this.uid + "/surveyData").set(that.surveyAnswerData);
+          alert("Thank you for completing the questionnaire");
         }
       }
     }
@@ -122,9 +105,19 @@
       }
       requestAnimationFrame(animate);
     })
+
   </script>
 
   <style>
+    .tipText {
+      color: #EE7379;
+      display: flex;
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 30px;
+      justify-content: space-around;
+      text-align: center;
+    }
     .progress {
       display: flex;
       width: 50%;
