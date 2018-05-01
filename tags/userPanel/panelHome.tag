@@ -3,10 +3,9 @@
   <div class="home-wrap" if={!homePage}>
     <!-- <h1>Hi this is home</h1> -->
     <section class="wrap tobeanimate">
-      <div class="home-option card-shape" each = {i in options} onclick={enter}>
+      <div class="home-option" each = {i in options} onclick={enter}>
         <img src={i.imgSrc} alt={i.title} >
         <h3>{i.title}</h3>
-        <p>{i.intro}</p>
       </div>
     </section>
   </div>
@@ -16,25 +15,22 @@
   <reminder if={homePage === "reminder"}></reminder>
 
   <script>
-  //  this.userInfo = this.parent.userInfo;
+   this.userInfo = this.parent.userInfo;
    this.options = [
      {
-      imgSrc: "./img/mainpageMustknowinfo.png",
+      imgSrc: "../img/app1.jpg",
       title: "Must-Know Information",
-      homePage: "must-know-info",
-      intro: "Here are basic U.S. health care jargons and health insurance policies you need to know in order to understand what people are talking."
+      homePage: "must-know-info"
      },
      {
-      imgSrc: "./img/main pageScenarios.png",
+      imgSrc: "../img/app1.jpg",
       title: "Learning Scenarios",
-      homePage: "learning-scenario",
-      intro: "You will experiencing 3 different situations. We will provide explanations/consequences regarding your choice, but the final decision is up to you."
+      homePage: "learning-scenario"
      },
      {
-      imgSrc: "./img/mainpageReminder.png",
-      title: "Personalized Reminder",
-      homePage: "reminder",
-      intro: "Create your personal profile to receive insurance-related reminders (e.g., Exams, Vaccines, Claims...)."
+      imgSrc: "../img/app1.jpg",
+      title: "Personalized reminder",
+      homePage: "reminder"
      }
    ]
 
@@ -56,13 +52,6 @@
       padding: 40px 0;
     }
 
-    p {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
-      font-weight: lighter;
-    }
-
     .wrap {
       display: flex;
       justify-content: center;
@@ -74,17 +63,30 @@
     }
 
     .wrap .home-option {
-      border-radius: 5px;
+      width: 250px;
+      height: 280px;
+      background: #fff;
+      margin: 20px 50px;
+      box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      box-sizing: border-box;
+      padding: 20px;
+      transition: box-shadow .3s ease-in-out;
+    }
+    .wrap .home-option h3{
+      font-weight: 100;
+
     }
 
-    .wrap .home-option h3{
-      font-weight: 400;
+    .wrap .home-option:hover {
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
     }
 
     .wrap .home-option img{
       width: 50px;
       height: 50px;
       border-radius: 50%;
+
     }
   </style>
 </panelHome>

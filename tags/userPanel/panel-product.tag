@@ -12,6 +12,7 @@
     <survey if={surveyStart}></survey>
   </section>
 
+
   <script>
     this.surveyStart = false;
     startSurvey() {
@@ -20,12 +21,6 @@
   </script>
 
   <style>
-
-    h1 {
-      padding: 50px 80px;
-      font-size: 30px;
-    }
-
     .wrap-product {
       font: "proxima nova";
       text-align: center;
@@ -41,22 +36,6 @@
       color: #EE7379;
       font-weight: 100;
       font-size: 20px;
-      text-align: center;
-      border-radius: 5px;
-      border: solid 2px #EE7379;
-      padding: 3px 10px;
-      margin: 30px auto;
-      width: 100px;
-      transition-duration: 400ms;
-      cursor: pointer;
-      display: block;
-    }
-
-    .startbutton:hover {
-      background-color: #EE7379;
-      color: #fff;
-    }
-
 
     .submitbutton:hover {
       background-color: #F07277;
