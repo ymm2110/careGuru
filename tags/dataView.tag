@@ -14,14 +14,17 @@
       <img src="./img/LOGO2.png" alt="logo">
     </div>
   </div>
-  <button class="btn" onclick={dataToggle}>How People Have The Same Questions As You Do?</button>
+  <button class="btn" onclick={dataToggle}>How people use health care system?</button>
   <div class="dataWrap" show={showData} ref="showData">
     <div id="status" class="data-view"></div>
+    <div id="learn" class="data-view"></div>
+    <div id="challenge" class="data-view"></div>
+    <div id="exam" class="data-view"></div>
     <div id="usage" class="data-view"></div>
     <!-- <div id="rating" class="data-view"></div> -->
   </div>
 
-  <a href="#tour" class="btn"  show={showData} ref="showData" type="button">Take A Tour Around</a>
+  <a href="#tour" class="btn"  show={showData} ref="showData" type="button"> Plz! Let me sign up!</a>
 
 
   <script>
@@ -81,7 +84,7 @@
             }, {
               name: 'International, employed',
               y: 5,
-              color: "#414B60"
+              color: "#5c5c8a"
             }, {
               name: 'Other - visiting scholar',
               y: 5,
@@ -135,6 +138,147 @@
         }]
       });
 
+
+      Highcharts.chart('challenge', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'We have met these challenges...'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false
+          },
+          showInLegend: true
+        }
+      },
+      series: [{
+        name: 'Percentage',
+        colorByPoint: true,
+        data: [{
+          name: "Don’t know where to find accurate information.",
+          y: 40,
+          sliced: true,
+          selected: true,
+          color: "#6FCEE9"
+        }, {
+          name: "Schools’ health care websites are too confusing.",
+          y: 55,
+          color: "#F07277"
+        }, {
+          name: 'There are too many rules.',
+          y: 5,
+          color: "#27314D"
+        }]
+      }]
+      });
+
+
+      Highcharts.chart('exam', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'Did you get regular health screening or recommended immunization in the past 12 months?'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false
+          },
+          showInLegend: true
+        }
+      },
+      series: [{
+        name: 'Percentage',
+        colorByPoint: true,
+        data: [{
+          name: "Yes",
+          y: 70,
+          sliced: true,
+          selected: true,
+          color: "#6FCEE9"
+        }, {
+          name: "Not sure",
+          y: 15,
+          color: "#F07277"
+        }, {
+          name: 'No',
+          y: 15,
+          color: "#27314D"
+        }]
+      }]
+    });
+
+    Highcharts.chart('learn', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'We are eager to know…'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false
+          },
+          showInLegend: true
+        }
+      },
+      series: [{
+        name: 'Percentage',
+        colorByPoint: true,
+        data: [{
+          name: 'How to find appropriate health care provider.',
+          y: 30,
+          sliced: true,
+          selected: true,
+          color: "#6FCEE9"
+        }, {
+          name: 'Must-know health insurance policy.',
+          y: 30,
+          color: "#F07277"
+        }, {
+          name: 'How to use my health insurance benefits?',
+          y: 20,
+          color: "#9fdfbf"
+        }, {
+          name: 'Basic terms of health insurance.',
+          y: 10,
+          color: "#5c5c8a"
+        }, {
+          name: 'The general U.S. healthcare system.',
+          y: 10,
+          color: "#27314D"
+        }]
+      }]
+    });
 
       //rating for
       // var data = [1,1,1,1,2,2,2,2,2,2,3,3,3,4,4,6,6,7,8,];
