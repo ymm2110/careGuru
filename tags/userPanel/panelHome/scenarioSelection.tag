@@ -4,7 +4,7 @@
     <div class="card-shape" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario}>
        { i.scenarioName }
        <div class="card-shape-preview">
-         <img src="./img/Scenario1.png" alt="">
+         <img src={i.scenarioImage || "./img/Scenario2.png"} alt="">
         </div>
     </div>
 
@@ -26,6 +26,7 @@
     [
       {
         scenarioID: 1,
+        scenarioImage: "./img/Scenario1.png",
         scenarioName: "Scenario 1",
         scenarioIntroduction: "Hello! I'm Greg. I'm 20 years old. I'm a junior in Boston College junior. I'm an international student from Singapore, and I have BC’s student health insurance.",
         scenarioContent:
@@ -43,7 +44,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +25,
+                  health: +20,
                   money: -40
                 },
                 optionWarn:
@@ -58,7 +59,7 @@
                 optionLinkTo: 3,
                 optionResults:
                 {
-                  health: -50,
+                  health: -45,
                   money: -0
                 },
                 optionWarn:
@@ -88,7 +89,7 @@
                 optionLinkTo: 2,
                 optionResults:
                 {
-                  health: -5,
+                  health: -10,
                   money: + 0
                 },
                 optionWarn:
@@ -127,7 +128,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +30,
+                  health: +25,
                   money: -25
                 },
                 optionWarn:
@@ -142,7 +143,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +30,
+                  health: +25,
                   money: -10
                 },
                 optionWarn:
@@ -418,6 +419,7 @@
       }, // end of scenario 1
       {
         scenarioID: 2,
+        scenarioImage: "./img/Scenario2.png",
         scenarioName: "Scenario 2",
         scenarioIntroduction: "Scenario 2 - need update",
         scenarioContent:
@@ -579,6 +581,7 @@
       }, // end of scenario 2
       {
         scenarioID: 3,
+        scenarioImage: "./img/Scenario3.png",
         scenarioName: "Scenario 3",
         scenarioIntroduction: "Scenario 3 - need update",
         scenarioContent:
