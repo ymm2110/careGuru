@@ -44,7 +44,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +25,
+                  health: +20,
                   money: -40
                 },
                 optionWarn:
@@ -59,7 +59,7 @@
                 optionLinkTo: 3,
                 optionResults:
                 {
-                  health: -50,
+                  health: -45,
                   money: -0
                 },
                 optionWarn:
@@ -89,7 +89,7 @@
                 optionLinkTo: 2,
                 optionResults:
                 {
-                  health: -5,
+                  health: -10,
                   money: + 0
                 },
                 optionWarn:
@@ -128,7 +128,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +30,
+                  health: +25,
                   money: -25
                 },
                 optionWarn:
@@ -143,7 +143,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +30,
+                  health: +25,
                   money: -10
                 },
                 optionWarn:

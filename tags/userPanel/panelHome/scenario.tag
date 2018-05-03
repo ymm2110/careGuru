@@ -25,6 +25,11 @@
       './img/dizzy1.png',
       './img/dizzy2.png',
       './img/dizzy3.png',
+      './img/sad1.png',
+      './img/sad2.png',
+      './img/sad3.png',
+      './img/happy1.png',
+      './img/happy2.png',
     ]
 
 
@@ -49,16 +54,29 @@
       // }else if(that.health <= 75 && that.health > 50) {
       //   that.imgID = 1;
       // }
-      var x = that.health;
-      switch (true) {
+
+  var x = that.health;
+  switch (true) {
   case (x === 50):
     that.imgID = 0;
     break;
-  case (x<= 75 && x > 50):
-    that.imgID = 1;
+  case (x<= 60 && x > 50):
+    that.imgID = 3;
     break;
-  case (x<= 100 && x > 70):
+  case (x< 50 && x >= 40):
     that.imgID = 2;
+    break;
+  case (x< 40 && x > 20):
+    that.imgID = 4;
+    break;
+  case (x<= 20 && x > 0):
+    that.imgID = 5;
+    break;
+  case (x<= 80 && x > 60):
+    that.imgID = 3;
+    break;
+  case (x<= 100 && x > 80):
+    that.imgID = 7;
     break;
   default:
     that.imgID = 0;
