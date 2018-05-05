@@ -152,7 +152,7 @@
     .progress > li:before {
       content: "";
       position: absolute;
-      left: -19px;
+      left: -55px;
       top: 0;
       bottom: 0;
       margin: auto 0;
@@ -168,11 +168,11 @@
       color: #fff;
     }
     .progress > li.finish:after {
-      width: 18px;
+      width: 52px;
       background-color: #EE7379;
     }
     .progress > li.finish:before {
-      width: 18px;
+      width: 55px;
       background-color: #EE7379;
     }
 

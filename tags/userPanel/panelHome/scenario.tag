@@ -1,10 +1,14 @@
 <scenario>
   <section class="scene-wrap wrap-anime" if={!gameover}>
     <div class="status">
-      <img src={ imgs[imgID] } alt="" class="character">
-      <p>{scenarioIntroduction}</p>
-      <p>health: {health}</p>
-      <p>money: {money}</p>
+      <div>
+        <img src={ imgs[imgID] } alt="" class="character">
+      </div>
+      <div>
+        <p>{scenarioIntroduction}</p>
+        <p>health: {health}</p>
+        <p>money: {money}</p>
+      </div>
     </div>
     <div class="scene-main"><sceneactionfeedback data={feedback} if={feedback}></sceneactionfeedback>
       <sceneboard data={currentScene}></sceneboard>
@@ -157,20 +161,23 @@
       background: #fff;
       min-width: 200px;
       max-width: 30%;
-      height: 270px;
+      min-height: 370px;
       border-radius: 5px;
       box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-around;
     }
 
-      .scene-wrap .status .character{
+      .scene-wrap .status div .character{
         width: 70px;
         height: auto;
         margin: 0 auto;
         display: block;
+      }
+
+      .scene-wrap .status div:nth-child(2){
+        padding: 5px 15px;
       }
   </style>
 </scenario>
