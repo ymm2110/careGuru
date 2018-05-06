@@ -371,37 +371,22 @@
               option1:
               {
                 optionName: "Student health center",
-                optionLinkTo: 8,
+                optionLinkTo: 7,
                 optionResults:
                 {
-                  health: +0,
-                  money: +0
+                  health: +20,
+                  money: -5
                 },
                 optionWarn:
                 {
                   warnName: "Student health center is most students’ primary care provider, and most physician and medical professionals there don’t necessarily specialize in  orthopedics. Student health center can refer students to specialists.",
-                  choosedFeedback: "TO BE UPDATED"
+                  choosedFeedback: "Doctor at the student health center referred your to an in-network orthopedist. Because your insurance company is notified, you don’t have additional claims to do. You only need to pay a small copay and coinsurance."
                 }
               },
               option2:
               {
                 optionName: "A clinic with an orthopedist.",
-                optionLinkTo: 8,
-                optionResults:
-                {
-                  health: +20,
-                  money: -10
-                },
-                optionWarn:
-                {
-                  warnName: "Orthopedists specialize in medicine concerned with injuries of the skeleton. They can give you treatment related to the injury. However, before you go, check if your insurance policy require a referral from your primary care provider to avoid high bills. Also, remember to choose an in-network orthopedist to maximize your insurance pay.",
-                  choosedFeedback: "TO BE UPDATED"
-                }
-              },
-              option3:
-              {
-                optionName: "A hospital",
-                optionLinkTo: 8,
+                optionLinkTo: 7,
                 optionResults:
                 {
                   health: +20,
@@ -409,12 +394,33 @@
                 },
                 optionWarn:
                 {
-                  warnName: "Large hospitals ......",
-                  choosedFeedback: "TO BE UPDATED"
+                  warnName: "Orthopedists specialize in medicine concerned with injuries of the skeleton. They can give you treatment related to the injury. However, before you go, check if your insurance policy require a referral from your primary care provider to avoid high bills. Also, remember to choose an in-network orthopedist to maximize your insurance pay",
+                  choosedFeedback: "You went to an orthopedist, got treated,  and gave the doctor’s office your insurance information. Weeks later, you received a large bill. Because you don’t have a referral, your insurance company declined to pay."
+                }
+              },
+              option3:
+              {
+                optionName: "A hospital",
+                optionLinkTo: 7,
+                optionResults:
+                {
+                  health: +20,
+                  money: -20
+                },
+                optionWarn:
+                {
+                  warnName: "Large hospitals is very likely to have orthopedist department and can provide proper treatment. However, before you go, check if your insurance policy require a referral from your primary care provider to avoid high bills. Keep in mind that hospitals may result a higher cost. Also, remember to choose an in-network provider to maximize your insurance pay",
+                  choosedFeedback: "You went to a hospital, got treated,  and gave the doctor’s office your insurance information. Weeks later, you received a large bill. Because you don’t have a referral, your insurance company declined to pay."
                 }
               }
             }
           }, //end of scenario 1 scene 6
+          {
+            question: "",
+            descrip: "Congratulation for completing the first learning scenario! Please check the “Must-Know Information” session if you need to review any information.",
+            imgurl: "./img/happy1.png",
+            sceneId: 7,
+          }, //end of scenario 1 scene 7
         ]
       }, // end of scenario 1
       {

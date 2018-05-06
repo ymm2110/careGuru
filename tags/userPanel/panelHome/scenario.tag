@@ -157,7 +157,7 @@
       background: #fff;
       min-width: 200px;
       max-width: 30%;
-      height: 270px;
+      height: 350px;
       border-radius: 5px;
       box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
       display: flex;
