@@ -29,7 +29,7 @@ input:focus {
 }
 
 button:focus {
-    outline: none;   
+    outline: none;
 }
 
 .clearfix:after {
@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb {
 /* style for JS control */
 
 .activate {
-    animation: slideIn 1s cubic-bezier(1, 0.15, 0.23, 0.87); 
+    animation: slideIn 1s cubic-bezier(1, 0.15, 0.23, 0.87);
 }
 @keyframes slideIn {
     from {
@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 .deactivate {
-    animation: slideOut 1s cubic-bezier(1, 0.15, 0.23, 0.87); 
+    animation: slideOut 1s cubic-bezier(1, 0.15, 0.23, 0.87);
 }
 @keyframes slideOut {
     from {
@@ -309,7 +309,7 @@ tobeanimate {
     width: 250px;
     height: 280px;
     background: #fff;
-    margin: 20px 50px;
+    margin: 10% 50px;
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     box-sizing: border-box;
@@ -342,7 +342,7 @@ tobeanimate {
     position: relative;
     overflow: hidden;
 }
-    
+
 .bar-shape > *::after {
     content: "";
     position: absolute;
@@ -360,7 +360,7 @@ tobeanimate {
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.1);
     transform: translateY(1px);
 }
-    
+
 .bar-shape > *:hover:after {
     transform: translateX(0px);
 }
@@ -399,13 +399,13 @@ tobeanimate {
         padding: 7px 5px;
         vertical-align: middle;
     }
-    
-    .wrap .sidebar ul > li.activeSideBar::after{ 
+
+    .wrap .sidebar ul > li.activeSideBar::after{
         height: 2px;
         width: 100%;
         bottom: -40%;
     }
-    
+
     .home-wrap > .wrap {
         display: block;
         height: calc(100% - 110px);
