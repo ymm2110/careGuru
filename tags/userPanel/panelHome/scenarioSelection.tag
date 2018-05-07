@@ -4,7 +4,7 @@
     <div class="card-shape" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario}>
        { i.scenarioName }
        <div class="card-shape-preview">
-         <img src="./img/Scenario1.png" alt="">
+         <img src={i.scenarioImage || "./img/Scenario2.png"} alt="">
         </div>
     </div>
 
@@ -26,6 +26,7 @@
     [
       {
         scenarioID: 1,
+        scenarioImage: "./img/Scenario1.png",
         scenarioName: "Scenario 1",
         scenarioIntroduction: "Hello! I'm Greg. I'm 20 years old. I'm a junior in Boston College junior. I'm an international student from Singapore, and I have BC’s student health insurance.",
         scenarioContent:
@@ -43,7 +44,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +25,
+                  health: +20,
                   money: -40
                 },
                 optionWarn:
@@ -58,7 +59,7 @@
                 optionLinkTo: 3,
                 optionResults:
                 {
-                  health: -50,
+                  health: -45,
                   money: -0
                 },
                 optionWarn:
@@ -88,7 +89,7 @@
                 optionLinkTo: 2,
                 optionResults:
                 {
-                  health: -5,
+                  health: -10,
                   money: + 0
                 },
                 optionWarn:
@@ -127,7 +128,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +30,
+                  health: +25,
                   money: -25
                 },
                 optionWarn:
@@ -142,7 +143,7 @@
                 optionLinkTo: 4,
                 optionResults:
                 {
-                  health: +30,
+                  health: +25,
                   money: -10
                 },
                 optionWarn:
@@ -370,37 +371,22 @@
               option1:
               {
                 optionName: "Student health center",
-                optionLinkTo: 8,
+                optionLinkTo: 7,
                 optionResults:
                 {
-                  health: +0,
-                  money: +0
+                  health: +20,
+                  money: -5
                 },
                 optionWarn:
                 {
                   warnName: "Student health center is most students’ primary care provider, and most physician and medical professionals there don’t necessarily specialize in  orthopedics. Student health center can refer students to specialists.",
-                  choosedFeedback: "TO BE UPDATED"
+                  choosedFeedback: "Doctor at the student health center referred your to an in-network orthopedist. Because your insurance company is notified, you don’t have additional claims to do. You only need to pay a small copay and coinsurance."
                 }
               },
               option2:
               {
                 optionName: "A clinic with an orthopedist.",
-                optionLinkTo: 8,
-                optionResults:
-                {
-                  health: +20,
-                  money: -10
-                },
-                optionWarn:
-                {
-                  warnName: "Orthopedists specialize in medicine concerned with injuries of the skeleton. They can give you treatment related to the injury. However, before you go, check if your insurance policy require a referral from your primary care provider to avoid high bills. Also, remember to choose an in-network orthopedist to maximize your insurance pay.",
-                  choosedFeedback: "TO BE UPDATED"
-                }
-              },
-              option3:
-              {
-                optionName: "A hospital",
-                optionLinkTo: 8,
+                optionLinkTo: 7,
                 optionResults:
                 {
                   health: +20,
@@ -408,16 +394,38 @@
                 },
                 optionWarn:
                 {
-                  warnName: "Large hospitals ......",
-                  choosedFeedback: "TO BE UPDATED"
+                  warnName: "Orthopedists specialize in medicine concerned with injuries of the skeleton. They can give you treatment related to the injury. However, before you go, check if your insurance policy require a referral from your primary care provider to avoid high bills. Also, remember to choose an in-network orthopedist to maximize your insurance pay",
+                  choosedFeedback: "You went to an orthopedist, got treated,  and gave the doctor’s office your insurance information. Weeks later, you received a large bill. Because you don’t have a referral, your insurance company declined to pay."
+                }
+              },
+              option3:
+              {
+                optionName: "A hospital",
+                optionLinkTo: 7,
+                optionResults:
+                {
+                  health: +20,
+                  money: -20
+                },
+                optionWarn:
+                {
+                  warnName: "Large hospitals is very likely to have orthopedist department and can provide proper treatment. However, before you go, check if your insurance policy require a referral from your primary care provider to avoid high bills. Keep in mind that hospitals may result a higher cost. Also, remember to choose an in-network provider to maximize your insurance pay",
+                  choosedFeedback: "You went to a hospital, got treated,  and gave the doctor’s office your insurance information. Weeks later, you received a large bill. Because you don’t have a referral, your insurance company declined to pay."
                 }
               }
             }
           }, //end of scenario 1 scene 6
+          {
+            question: "",
+            descrip: "Congratulation for completing the first learning scenario! Please check the “Must-Know Information” session if you need to review any information.",
+            imgurl: "./img/happy1.png",
+            sceneId: 7,
+          }, //end of scenario 1 scene 7
         ]
       }, // end of scenario 1
       {
         scenarioID: 2,
+        scenarioImage: "./img/Scenario2.png",
         scenarioName: "Scenario 2",
         scenarioIntroduction: "Scenario 2 - need update",
         scenarioContent:
@@ -579,6 +587,7 @@
       }, // end of scenario 2
       {
         scenarioID: 3,
+        scenarioImage: "./img/Scenario3.png",
         scenarioName: "Scenario 3",
         scenarioIntroduction: "Scenario 3 - need update",
         scenarioContent:
