@@ -1,16 +1,18 @@
 
 <reminder>
-  <div>
-    <h3>Personalized Health Reminder</h3>
+  <div class="head-middle">
+    <h1>Personalized Health Reminder</h1>
     <p>This reminder shows you annual health screens you need to take, and allows you to add your own items</p>
-    <p>Currentlt we only have data for adults</p>
+    <p class = "tipText">Currentlt we only have data for adults</p>
     <p>displaying info for : {personCategory}</p>
   </div>
 
-
+  <div class="reminder-item">
     <reminder-item each={ reminderData }></reminder-item>
     <reminder-item each={ ownReminderData }></reminder-item>
-    <input type="text" placeholder="Add your own" onkeypress={ addItem }>
+    <input class = "add-form" type="text" placeholder="Add your own" onkeypress={ addItem }>
+  </div>
+
 
     <!--
     <button class="btn btn-danger" disabled={ reminderData.filter(onlyDone).length == 0 }>
@@ -113,5 +115,49 @@
   </script>
 
   <style>
+  :scope {
+			display: block;
+		}
+
+  .head-middle {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .head-middle h1{
+    font-size: 1.4em;
+    font-weight: 100;
+    padding: 10px 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .head-middle p{
+    font-size: 1em;
+    font-weight: 100;
+    padding: 20px 20%;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .tipText {
+    color: #EE7379;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .reminder-item{
+    color: #EE7379;
+    text-align: center;
+    line-height: 2em;
+  }
+
+  .add-form {
+    font-size: 1.4em;
+    margin-top: 30px;
+  }
   </style>
 </reminder>
