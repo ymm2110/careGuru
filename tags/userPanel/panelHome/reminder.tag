@@ -3,12 +3,13 @@
   <div>
     <h3>Personalized Health Reminder</h3>
     <p>This reminder shows you annual health screens you need to take, and allows you to add your own items</p>
-    <p>Currentlt it only works for adults</p>
+    <p>Currentlt we only have data for adults</p>
     <p>displaying info for : {personCategory}</p>
   </div>
 
 
     <reminder-item each={ reminderData }></reminder-item>
+    <reminder-item each={ ownReminderData }></reminder-item>
     <input type="text" placeholder="Add your own" onkeypress={ addItem }>
 
     <!--
@@ -20,6 +21,7 @@
   <script>
     var that = this;
     this.reminderData = [];
+    this.ownReminderData = [];
     this.uid = this.parent.parent.uid;
 
     this.age;
@@ -30,6 +32,7 @@
     var database = firebase.database();
     var userRef = database.ref('/careGuru/' + this.uid);
     var userReminderRef = userRef.child('/userReminder');
+    var userOwnReminderRef = userRef.child('/userOwnReminderRef');
     var ageRef = userRef.child('/surveyData/age');
     var genderRef = userRef.child('/surveyData/gender');
 
@@ -83,16 +86,15 @@
         reminderDataArray.push(dataToBePushed[key]);
       }
 
+      that.reminderData = reminderDataArray;
       userReminderRef.set(reminderDataArray);
       that.update();
     });
 
-
-    userReminderRef.on('child_added',function(snapshot) {
+    userOwnReminderRef.on('child_added',function(snapshot) {
       var data = snapshot.val(); // Object with properties as keys
 					data.id = snapshot.key;
-
-			that.reminderData.push(data);
+			that.ownReminderData.push(data);
 			that.update();
     });
 
@@ -101,8 +103,8 @@
 			if (event.which === 13) {
 				newTask.task = event.target.value;	// Grab the user task value
 				newTask.done = false;
-				var newKey = that.reminderData.length;
-        userReminderRef.child(newKey).set(newTask);
+				var newKey = userOwnReminderRef.push().key;
+        userOwnReminderRef.child(newKey).set(newTask);
 				event.target.value = "";	// RESET INPUT
 				event.target.focus();			// FOCUS BACK ON INPUT
 			}
