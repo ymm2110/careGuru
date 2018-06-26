@@ -5,6 +5,7 @@
       <panel-head></panel-head>
       <panelHome if={ subpage === `${this.uid}/home` }></panelHome>
       <panel-product if={ subpage === `${this.uid}/product` }></panel-product>
+      <panelContact if={ subpage === `${this.uid}/contact` }></panelContact>
       <panelSaved if={ subpage === `${this.uid}/saved` && viewAll }></panelSaved>
       <panelSaved-view if={ eachSaved } data = { eachSaved }></panelSaved-view>
     </main>
